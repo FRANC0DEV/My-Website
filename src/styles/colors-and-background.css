@@ -1,0 +1,70 @@
+/*============================================NAVBAR========================================*/
+.logo-button,
+.theme-button,
+.navbar-menu-toggle {
+  background-color: transparent;
+}
+@media (prefers-color-scheme: light) {
+  .navbar {
+    border-color: #f5f5f5;
+    background-color: white;
+  }
+  .navbar-logo {
+    fill: #323640;
+    stroke: #323640;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    border-color: #2a2d35;
+    background-color: #323640;
+  }
+  .navbar-logo {
+    fill: #ece8e8;
+  }
+  .lucide-menu {
+    stroke: #ece8e8;
+  }
+}
+@media screen and (min-width: 801px) {
+  .navbar-option:hover {
+    background-color: #323640;
+    color: #ffffff;
+  }
+}
+@media screen and (min-width: 801px) and (prefers-color-scheme: dark) {
+  .navbar-option:hover {
+    background-color: #ece8e8;
+    color: #2a2d35;
+  }
+}
+
+.navbar-option-link {
+  text-decoration: none;
+  color: inherit;
+}
+#navbar-menu-toggle.open .menu-line.middle {
+  opacity: 0;
+}
+@media screen and (max-width: 800px) and (prefers-color-scheme: light) {
+  .navbar-options {
+    background-color: white;
+  }
+  .navbar-option {
+    border-color: #f5f5f5;
+  }
+  .navbar-option:hover {
+    background-color: #f5f5f5;
+  }
+}
+@media screen and (max-width: 800px) and (prefers-color-scheme: dark) {
+  .navbar-options {
+    background-color: #323640;
+  }
+  .navbar-option {
+    border-color: #2a2d35;
+  }
+  .navbar-option:hover {
+    background-color: #2a2d35;
+  }
+}

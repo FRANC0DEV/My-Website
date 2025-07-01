@@ -1,0 +1,26 @@
+/*========================================NAVBAR===================================*/
+.theme-button {
+  transform: translateX(-50%);
+}
+.navbar-option {
+  transition:
+    background-color 0.15s ease-in-out,
+    color 0.15s ease-in-out;
+}
+.navbar-menu-toggle .menu-line {
+  transition:
+    transform 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+    opacity 0.2s;
+  transform-origin: center;
+}
+.navbar-menu-toggle.open .menu-line.top {
+  transform: translateY(4.25px) rotate(45deg);
+}
+.navbar-menu-toggle.open .menu-line.bottom {
+  transform: translateY(-4.25px) rotate(-45deg);
+}
+@media screen and (max-width: 800px) {
+  .navbar-options {
+    transition: max-height 0.3s ease-in-out;
+  }
+}

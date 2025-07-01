@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Edgar Franco" />
+    <meta
+      name="description"
+      content="Hi! I'm Edgar and here you'll find information about my career as a frontend developer, projects, abilities and more!"
+    />
+    <!--stylesheet-->
+    <link rel="stylesheet" href="./src/styles/fonts.css" />
+    <link rel="stylesheet" href="./src/styles/colors-and-background.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/default.css" />
+    <link rel="stylesheet" href="./src/styles/transitions.css" />
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Light theme favicon (icon that will appear on Bookmarks) -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/public/svgs/logo.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <!-- Dark theme favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/public/svgs/logo.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+    <!--Title of the page-->
+    <title>Edgar Franco - Desarrollador Web</title>
+  </head>
+  <body class="body">
+    <!--Content that displays on the page-->
+    <header>
+      <nav class="layout navbar">
+        <!--Logo-->
+        <button class="button logo-button" id="logo-button">
+          <svg
+            width="86"
+            height="76"
+            viewBox="0 0 86 76"
+            xmlns="http://www.w3.org/2000/svg"
+            class="svg navbar-svg"
+          >
+            <g clip-path="url(#clip0_62_133)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M27.1026 17.4884C37.6119 6.94281 41.8881 3.21018 45.5483 1.36199C47.4327 0.456003 47.7951 0.383531 48.23 0.818399C48.6648 1.25327 48.6648 1.72438 48.3387 3.64506C48.1212 4.94966 47.9401 6.14555 47.9401 6.36298C47.9401 6.54418 48.991 5.67445 50.2231 4.40608C51.8901 2.73908 52.7961 2.12301 53.4846 2.12301C54.7168 2.12301 54.7168 2.34044 53.5209 8.53733C52.941 11.6177 52.6511 13.8645 52.8323 14.6617C53.0135 15.6764 53.8833 16.7999 56.7824 19.6265C60.8049 23.6128 62.6169 26.1496 65.1899 31.4042C66.422 33.9047 67.4367 35.3543 69.1762 37.0938C71.4955 39.4131 78.3084 44.1604 83.1645 46.8421C84.5053 47.6031 85.7012 48.3279 85.8099 48.5091C86.426 49.4876 83.9255 52.7853 81.6424 53.945C80.9539 54.3074 79.5768 55.2858 78.6346 56.1556L76.8589 57.6776L74.1047 57.0253C70.662 56.228 63.8853 53.8725 60.2976 52.278C57.5434 51.0096 56.42 50.6834 58.1957 51.6257L59.1742 52.0877L59.0383 54.5339L60.8049 52.9031C60.8049 52.9031 61.7109 53.2564 63.233 53.9087C65.4798 54.8509 72.5464 57.134 74.8295 57.6051L76.6777 58.0037L75.5543 58.6923C73.3437 60.1056 71.423 59.9969 65.8422 58.0762C60.66 56.3005 56.8549 55.7207 53.9557 56.2643C49.9694 57.0253 48.1212 62.0625 48.3749 71.2673C48.4836 74.7462 48.4112 75.326 47.9038 75.326C46.9616 75.326 36.3073 71.8109 31.9224 70.0351C24.4571 67.0273 17.8253 63.2222 11.9184 58.5111C8.14949 55.5032 2.67738 50.3573 1.48149 48.7265L0.466797 47.277L3.00354 44.9577C4.41686 43.6893 7.02608 40.6452 8.8018 38.2534C14.9624 29.9547 16.9556 27.6716 27.1026 17.4884ZM17.2455 38.8332C18.5864 36.224 21.3768 33.6148 24.6745 31.8753C28.2984 29.9547 27.5012 29.9547 23.6961 31.8753C20.3621 33.5423 17.318 36.2603 16.0859 38.6883C14.3826 41.9861 14.4913 46.3347 16.3033 50.3935C17.5717 53.2927 17.9703 53.039 16.8831 50.0311C16.0859 47.9293 16.0134 47.132 16.1221 44.1604C16.2671 41.3337 16.4483 40.3915 17.2455 38.8332ZM19.4199 39.558C20.7607 36.9488 23.5511 34.3396 26.8489 32.6001C30.4728 30.6794 29.6755 30.6794 25.8704 32.6001C22.5364 34.2671 19.4923 36.9851 18.2602 39.4131C16.557 42.7108 16.6657 47.0595 18.4776 51.1183C19.746 54.0174 20.1446 53.7638 19.0575 50.7559C18.2602 48.6541 18.1877 47.8568 18.2964 44.8852C18.4414 42.0585 18.6226 41.1163 19.4199 39.558ZM60.1255 31.5673C58.6306 30.616 55.9127 30.7519 55.9127 30.7519C55.9127 30.7519 56.8911 33.334 58.1957 34.1493C59.5003 34.9647 62.1639 34.9647 62.1639 34.9647C62.1639 34.9647 61.6203 32.5186 60.1255 31.5673Z"
+                fill="currentColor"
+                class="navbar-logo"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_62_133">
+                <rect
+                  width="85.5243"
+                  height="75.3774"
+                  transform="translate(0.466797 0.311279)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+        <!--theme toggle-->
+        <button class="button logo-button theme-button" id="theme-button">
+          <svg
+            width="92"
+            height="92"
+            viewBox="0 0 92 92"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="navbar-svg"
+          >
+            <path
+              d="M46.0002 3.83325V11.4999M46.0002 80.4999V88.1666M16.1768 16.1766L21.6202 21.6199M70.3802 70.3799L75.8235 75.8232M3.8335 45.9999H11.5002M80.5002 45.9999H88.1668M16.1768 75.8232L21.6202 70.3799M70.3802 21.6199L75.8235 16.1766M65.1668 45.9999C65.1668 56.5854 56.5856 65.1666 46.0002 65.1666C35.4147 65.1666 26.8335 56.5854 26.8335 45.9999C26.8335 35.4145 35.4147 26.8333 46.0002 26.8333C56.5856 26.8333 65.1668 35.4145 65.1668 45.9999Z"
+              stroke="#323640"
+              stroke-width="1.92593"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <!--navbar toggle-->
+        <button
+          class="button navbar-menu-toggle"
+          id="navbar-menu-toggle"
+          aria-label="Open menu"
+          aria-controls="navbar-menu"
+          aria-expanded="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu navbar-svg"
+          >
+            <path d="M4 12h16" class="menu-line middle" />
+            <path d="M4 18h16" class="menu-line bottom" />
+            <path d="M4 6h16" class="menu-line top" />
+          </svg>
+        </button>
+        <!--navbar-options-->
+        <ul class="navbar-options" id="navbar-menu">
+          <li class="navbar-option">
+            <a href="" class="navbar-option-link">About Me</a>
+          </li>
+          <li class="navbar-option">
+            <a href="" class="navbar-option-link">Portfolio</a>
+          </li>
+          <li class="navbar-option">
+            <a href="" class="navbar-option-link">Contact Me</a>
+          </li>
+          <!--Call to action-->
+        </ul>
+      </nav>
+      <section class="hero">
+        <h2>I'm <span>Edgar Franco</span></h2>
+        <h3>&lt;Frontend developer/&gt;</h3>
+        <h1>
+          Making <strong>attractive, secure and effective</strong> Web
+          Applications & Sites for your <strong> business </strong>
+        </h1>
+        <button class="nxt-section-arrow">&DownArrow;</button>
+        <div class="grass">
+          <!--put the grass svg here-->
+        </div>
+      </section>
+    </header>
+    <main class="layout">
+      <section></section>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

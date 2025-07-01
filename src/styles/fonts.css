@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Norse";
+  src: url("../public/fonts/Norse.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("../public/fonts/Norse-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+}
