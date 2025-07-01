@@ -1,0 +1,15 @@
+# Introduction
+
+Hello and welcome to my Website :D/. The main purpose of this repository is to protect the progress I made with my website from issues like computer crashes and other misfortunes.
+
+## Structure
+
+The project divides itself into 3 main folders `pages`,`styles` and `functions`.
+
+### Pages
+
+Contains the HTML5 files
+
+### Styles
+
+Contains all CSS files (separated by properties)

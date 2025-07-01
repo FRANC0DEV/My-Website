@@ -1,4 +1,4 @@
-import getElement from "./utils/getElement";
+import getElement from "../utils/getElement";
 
 export function setupNavbar() {
   const navbarToggle = getElement("navbar-menu-toggle", HTMLButtonElement);
