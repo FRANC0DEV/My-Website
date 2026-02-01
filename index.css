@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@font-face {
+  font-family: "Norse";
+  src: url("/public/fonts/Norse.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("/public/fonts/Norse-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+  25% {
+    transform: rotate(15deg);
+    transform-origin: top center;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+  75% {
+    transform: rotate(-15deg);
+    transform-origin: top center;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@theme {
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-newsreader: "Newsreader", sans-serif;
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-norse: "Norse", sans-serif;
+  --animate-swing: swing 6s linear infinite;
+  --animate-blink: blink 0.8s infinite;
+}

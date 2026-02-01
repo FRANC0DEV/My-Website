@@ -1,4 +1,4 @@
-import { setupNavbar } from "./navbar";
+import { setupNavbar } from "./Navbar";
 //elements
 
 setupNavbar();
