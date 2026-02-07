@@ -43,11 +43,21 @@
   }
 }
 
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @theme {
   --font-quicksand: "Quicksand", sans-serif;
   --font-newsreader: "Newsreader", sans-serif;
-  --font-orbitron: "Orbitron", sans-serif;
+  --font-googleSansCode: "Google Sans Code", sans-serif;
   --font-norse: "Norse", sans-serif;
   --animate-swing: swing 6s linear infinite;
   --animate-blink: blink 0.8s infinite;
+  --animate-carousel: carousel 10s linear infinite;
 }
