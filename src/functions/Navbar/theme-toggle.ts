@@ -1,7 +1,6 @@
 import getElement from "../../utils/getElement";
-
 /**Data type for value in the local storage */
-type BrowserTheme = "dark" | "light" | null;
+import getTheme from "../../utils/getTheme";
 
 /**Theme-toggle initializer */
 export default function Initialize() {
@@ -9,21 +8,10 @@ export default function Initialize() {
   const html = document.documentElement;
 
   /**Knowing preference from browser configuration or last saved preference*/
-  const themePreference: BrowserTheme = localStorage.getItem(
-    "data-theme",
-  ) as BrowserTheme;
-  const prefersDarkByDefault =
-    window.matchMedia("(prefers-color-scheme: dark)").matches ||
-    themePreference === "dark";
-
+  const themePreference = getTheme();
   /**Establishing initial theme parameters*/
-  if (prefersDarkByDefault) {
-    html.setAttribute("data-theme", "dark");
-    localStorage.setItem("data-theme", "dark");
-  } else {
-    html.setAttribute("data-theme", "light");
-    localStorage.setItem("data-theme", "light");
-  }
+  html.setAttribute("data-theme", themePreference);
+  localStorage.setItem("data-theme", themePreference);
 
   /**Pointing to theme toggle*/
   const themeSwitch = getElement("light-theme-button", HTMLButtonElement);

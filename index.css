@@ -43,21 +43,38 @@
   }
 }
 
-@keyframes carousel {
+@keyframes grass-appear {
   0% {
-    transform: translateX(0);
+    transform: translateY(100%);
+    opacity: 0%;
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateY(0.25rem);
+    opacity: 100%;
+    /* background: #b7b7b7; */
+  }
+}
+
+@keyframes natalia-sugerencia {
+  0% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
   }
 }
 
 @theme {
+  --breakpoint-xxs: 25rem;
+  --breakpoint-xs: 31rem;
   --font-quicksand: "Quicksand", sans-serif;
   --font-newsreader: "Newsreader", sans-serif;
   --font-googleSansCode: "Google Sans Code", sans-serif;
   --font-norse: "Norse", sans-serif;
   --animate-swing: swing 6s linear infinite;
   --animate-blink: blink 0.8s infinite;
-  --animate-carousel: carousel 10s linear infinite;
+  --animate-grass-appear: grass-appear 1.5s linear;
+  --animate-sug-nat: natalia-sugerencia 2s linear;
 }
