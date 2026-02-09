@@ -29,14 +29,14 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/public/svgs/logo.svg"
+      href="src/assets/svgs/logo.svg"
       media="(prefers-color-scheme: light)"
     />
     <!-- Dark theme favicon -->
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/public/svgs/logo.svg"
+      href="src/assets/svgs/logo.svg"
       media="(prefers-color-scheme: dark)"
     />
     <!--Title of the page-->
@@ -158,9 +158,9 @@
       </nav>
     </header>
     <main>
-      <section class="h-[calc(100vh-94px)] relative dark:bg-[#1a1a1a1]">
+      <section class="h-[calc(100dvh-94px)] relative dark:bg-[#1a1a1a1]">
         <div
-          class="relative z-10 h-full px-[5%] flex flex-col items-center pt-[5dvw] justify-start gap-y-[10dvw] lg:pt-[3dvw] lg:gap-y-[3.5dvh]"
+          class="relative z-10 px-[5%] flex flex-col items-center pt-[5dvw] justify-start gap-y-[10dvw] lg:pt-[3dvw] lg:gap-y-[3.5dvh] dark:bg-[#1a1a1a] dark:lg:bg-transparent"
         >
           <div class="flex flex-col lg:gap-y-[3.8vw] xl:gap-y-[3vw]">
             <h2
@@ -171,19 +171,41 @@
                 >I'm</span
               >
               <span
-                class="font-norse text-[14dvh] leading-[12dvh] xxs:leading-[14dvh] xs:text-[18dvw] xs:leading-[18dvh] sm:text-[18dvw]"
-                >Edgar Franco</span
+                class="font-norse text-[14dvh] leading-[12dvh] xxs:leading-[14dvh] xs:text-[18dvw] xs:leading-[18dvh] sm:text-[18dvw] xl:text-[12dvw]"
               >
+                <div
+                  class="flex flex-wrap gap-x-[0.5ch] wrap-anywhere justify-center"
+                  id="my-name"
+                >
+                  <div class="flex flex-nowrap gap-0">
+                    <span class="opacity-0">E</span>
+                    <span class="opacity-0">D</span>
+                    <span class="opacity-0">G</span>
+                    <span class="opacity-0">A</span>
+                    <span class="opacity-0">R</span>
+                  </div>
+                  <!-- &nbsp; -->
+                  <div class="flex flex-nowrap gap-0">
+                    <span class="opacity-0">F</span>
+                    <span class="opacity-0">R</span>
+                    <span class="opacity-0">A</span>
+                    <span class="opacity-0">N</span>
+                    <span class="opacity-0">C</span>
+                    <span class="opacity-0">O</span>
+                  </div>
+                </div>
+
+                <!-- Edgar Franco -->
+              </span>
             </h2>
             <h3
               class="font-quicksand font-light text-[3dvh] md:text-[3.8dvh] xl:text-[3dvw] text-center"
             >
               &lt;Frontend developer/&gt;
             </h3>
-            <h1
+            <!-- <h1
               class="font-quicksand text-[2.5vh] md:text-[3vh] mt-[1vh] xl:mt-0 text-center"
             >
-              <!--attractive, secure, effective-->
               Making
               <strong
                 id="hero-text-animation-target"
@@ -201,7 +223,7 @@
                   business
                 </strong>
               </span>
-            </h1>
+            </h1> -->
           </div>
           <!--Down Arrow-->
           <button
@@ -309,6 +331,9 @@
           class="hidden lg:block absolute w-full h-full top-0 left-0 pointer-events-none"
         >
         </canvas>
+        <div
+          class="lg:hidden bgHexagon absolute top-0 left-0 h-full w-full"
+        ></div>
       </section>
     </main>
     <script type="module" src="./src/functions/main.ts"></script>

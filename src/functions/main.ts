@@ -1,6 +1,6 @@
 import { setupNavbar } from "./Navbar";
-import StartWindAnimation from "./Hero/canvas-wind-animation";
+import { setupHeroSection } from "./Hero";
 //elements
 
 setupNavbar();
-StartWindAnimation();
+setupHeroSection();
