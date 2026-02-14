@@ -122,18 +122,23 @@
         <div
           class="flex-1 relative z-10 flex flex-col items-center justify-between dark:bg-[#1a1a1a] dark:lg:bg-transparent"
         >
-          <div class="flex-1 flex flex-col justify-between">
+          <!--Text & button container-->
+          <div
+            class="flex-1 flex flex-col justify-between mt-10 landscape:gap-y-10 lg:landscape:gap-y-0"
+          >
             <!--Text-->
-            <div class="flex flex-col h-full justify-center gap-y-10">
+            <div
+              class="flex flex-1 flex-col justify-start lg:justify-center gap-y-10 landscape:gap-y-0 lg:landscape:gap-y-10"
+            >
               <h2
                 class="flex flex-col leading-none text-center text-[#323640] dark:text-[#fcdb4c]"
               >
                 <span
-                  class="font-quicksand font-light not-landscape:text-[7dvh] landscape:text-[7dvw] lg:landscape:text-[4dvw]"
+                  class="font-quicksand font-light not-landscape:text-[7dvh] landscape:text-[7dvw] lg:landscape:text-[3dvw]"
                   >I'm</span
                 >
                 <span
-                  class="font-norse not-landscape:text-[14dvh] landscape:text-[20dvw] lg:landscape:text-[18dvw]"
+                  class="font-norse not-landscape:text-[14dvh] landscape:text-[20dvw] lg:landscape:text-[16dvw]"
                 >
                   <div
                     class="inline-flex flex-wrap gap-x-[0.5ch] wrap-anywhere justify-center leading-none"
@@ -161,12 +166,12 @@
                 </span>
               </h2>
               <h3
-                class="font-quicksand font-light text-center not-landscape:text-[4dvh] landscape:text-[5dvw] lg:landscape:text-[4dvw]"
+                class="font-quicksand font-light text-center not-landscape:text-[4dvh] landscape:text-[5dvw] lg:landscape:text-[3dvw]"
               >
                 &lt;Frontend developer/&gt;
               </h3>
             </div>
-            <!--Down Arrow-->
+            <!--Down Arrow Button-->
             <button
               class="nxt-section-arrow block animate-bounce text-[#323640] cursor-pointer mx-auto"
             >
@@ -186,8 +191,9 @@
               </svg>
             </button>
           </div>
+          <!--Grass container-->
           <div
-            class="w-full h-12 text-[#323640]"
+            class="w-full h-12 text-[#323640] animate-grass-appear"
             style="
               background-image: url(&quot;./src/assets/svgs/grass.svg&quot;);
               background-repeat: repeat-x;
@@ -206,6 +212,13 @@
         <div
           class="lg:hidden bgHexagon absolute top-0 left-0 h-full w-full"
         ></div>
+      </section>
+
+      <section>
+        <div class="w-full h-[20dvh] bg-[#323640]">
+          <p class="text-center text-white">With experience using</p>
+        </div>
+        <div class="wh-full h-[80dvh]"></div>
       </section>
     </main>
     <script type="module" src="./src/functions/main.ts"></script>
