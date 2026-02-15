@@ -68,12 +68,46 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%238e9192' fill-opacity='0.47' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
+.techcarousel::-webkit-scrollbar {
+  display: none;
+}
+
+.techcarousel .carouselgroup .card {
+  aspect-ratio: 1;
+  width: 5rem;
+  padding: 1rem;
+  align-content: center;
+  overflow: hidden;
+  border-radius: 5px;
+  border-width: 0.5px;
+  border-color: oklch(37.1% 0 0);
+}
+.techcarousel .carouselgroup .card:hover {
+  border-color: oklch(55.6% 0 0);
+}
+
+.carouselgroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-right: 1rem;
+  animation: carousel-spin 20s linear infinite;
+}
+
+@keyframes carousel-spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
 @theme {
   --breakpoint-xxs: 25rem;
   --breakpoint-xs: 31rem;
   --font-quicksand: "Quicksand", sans-serif;
-  --font-newsreader: "Newsreader", sans-serif;
-  --font-googleSansCode: "Google Sans Code", sans-serif;
   --font-norse: "Norse", sans-serif;
   --animate-swing: swing 6s linear infinite;
   --animate-blink: blink 0.8s infinite;
