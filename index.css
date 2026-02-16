@@ -74,8 +74,9 @@
 
 .techcarousel .carouselgroup .card {
   aspect-ratio: 1;
-  width: 5rem;
-  padding: 1rem;
+  width: 4rem;
+  padding: 0.6rem;
+  box-sizing: border-box;
   align-content: center;
   overflow: hidden;
   border-radius: 5px;
@@ -92,7 +93,7 @@
   justify-content: center;
   gap: 1rem;
   padding-right: 1rem;
-  animation: carousel-spin 20s linear infinite;
+  animation: carousel-spin 40s linear infinite;
 }
 
 @keyframes carousel-spin {
@@ -109,7 +110,9 @@
   --breakpoint-xs: 31rem;
   --font-quicksand: "Quicksand", sans-serif;
   --font-norse: "Norse", sans-serif;
+  --font-juliusSansOne: "Julius Sans One", sans-serif;
   --animate-swing: swing 6s linear infinite;
   --animate-blink: blink 0.8s infinite;
   --animate-grass-appear: grass-appear 1.5s linear;
+  --animate-fade-in: fadeIn 2s linear forwards;
 }

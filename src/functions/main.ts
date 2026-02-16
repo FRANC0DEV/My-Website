@@ -1,6 +1,8 @@
-import { setupNavbar } from "./Navbar";
-import { setupHeroSection } from "./Hero";
+import { setupNavbar } from "./navbar";
+import { setupHeroSection } from "./hero";
+import { setupSkillsAndTechSection } from "./skills-and-technologies";
 //elements
 
 setupNavbar();
 setupHeroSection();
+setupSkillsAndTechSection();
