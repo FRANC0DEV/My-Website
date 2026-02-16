@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,6 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
       rel="stylesheet"
     />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    /> -->
     <!-- Light theme favicon (icon that will appear on Bookmarks) -->
     <link
       rel="icon"
@@ -167,8 +171,9 @@
               </h3>
             </div>
             <!--Down Arrow Button-->
-            <button
+            <a
               class="nxt-section-arrow block animate-bounce text-[#222222] cursor-pointer mx-auto"
+              href="#skills-and-technologies"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +189,7 @@
                 <path d="M12 8v8" />
                 <path d="m8 12 4 4 4-4" />
               </svg>
-            </button>
+            </a>
           </div>
           <!--Grass container-->
           <div
@@ -209,19 +214,27 @@
         ></div>
       </section>
       <!--Skills & Technologies-->
-      <section>
+      <section id="skills-and-technologies">
         <div
-          class="bg-[#222222] px-[5%] py-4 flex flex-col landscape:flex-row gap-3"
+          class="bg-[#222222] px-[5%] py-4 flex flex-col lg:landscape:flex-row landscape:py-16 sm:py-16 gap-3 lg:landscape:justify-between"
         >
-          <h2
-            class="font-juliusSansOne text-[#f2f2f2] text-center text-[2.5dvh] landscape:text-[16px] landscape:content-center flex-2"
-          >
-            Built with modern firepower
-          </h2>
+          <div class="flex-2 flex flex-col justify-center">
+            <h2
+              class="font-juliusSansOne text-[#f2f2f2] text-center text-[2.5dvh] sm:landscape:text-[24px] landscape:text-[16px] lg:landscape:text-[1.5dvw] lg:landscape:text-left"
+            >
+              Built with modern firepower
+            </h2>
+            <p
+              class="font-quicksand text-[#f2f2f2] font-light italic text-[1.9dvh] text-center sm:landscape:text-[20px] landscape:text-center landscape:text-[14px] lg:landscape:text-left lg:landscape:text-[2dvh]"
+            >
+              Serious tech, human touch
+            </p>
+          </div>
+
           <!--Static cards (mobile only)-->
           <div
             id="static-tech-cards-container"
-            class="w-full flex flex-wrap justify-center landscape:hidden opacity-0"
+            class="w-full flex flex-wrap justify-center landscape:hidden sm:hidden opacity-0"
           >
             <img
               class="grayscale w-16 p-2 aspect-square"
@@ -271,7 +284,7 @@
               alt="AWS Lambda"
             />
             <img
-              class="grayscale w-16 p-2 aspect-square"
+              class="w-16 p-2 aspect-square filter-[contrast(0%)_brightness(180%)]"
               src="/src/assets/svgs/shadcnUI.svg"
               alt="Shadcn UI"
             />
@@ -308,7 +321,7 @@
               alt="Git"
             />
             <img
-              class="grayscale w-16 p-2 aspect-square"
+              class="grayscale w-16 p-2 aspect-square filter-[contrast(0%)_brightness(180%)]"
               src="/src/assets/svgs/github.svg"
               alt="Github"
             />
@@ -316,7 +329,7 @@
 
           <!--Carousel (only on landscape or larger devices) -->
           <div
-            class="hidden landscape:flex techcarousel border border-red-600 w-full overflow-x-auto flex-4 relative before:absolute before:left-0 before:z-10 before:w-[10%] before:h-full before:bg-linear-90 before:from-[#222222] before:from-5% before:to-transparent before:to-80% after:absolute after:right-0 after:z-10 after:w-[10%] after:h-full after:bg-linear-90 after:from-transparent after:from-5% after:to-[#222222] after:to-80%"
+            class="techcarousel relative hidden w-full flex-4 overflow-x-auto before:absolute before:left-0 before:z-10 before:h-full before:w-[10%] before:bg-linear-90 before:from-[#222222] before:from-5% before:to-transparent before:to-80% after:absolute after:right-0 after:z-10 after:h-full after:w-[10%] after:bg-linear-90 after:from-transparent after:from-5% after:to-[#222222] after:to-80% landscape:flex sm:flex"
           >
             <!--group-->
             <div class="carouselgroup">
@@ -1030,6 +1043,7 @@
             </div>
           </div>
         </div>
+        <div class="h-dvh">p</div>
       </section>
     </main>
     <script type="module" src="./src/functions/main.ts"></script>
