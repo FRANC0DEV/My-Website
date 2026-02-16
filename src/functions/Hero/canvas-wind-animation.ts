@@ -195,11 +195,11 @@ const windData = winds.map((wind) => ({
 let globalStartTime = Date.now();
 
 function getBackgroundColor(theme: BrowserTheme): string {
-  return theme === "dark" ? "#1a1a1a" : "#faf9f9";
+  return theme === "dark" ? "#1a1a1a" : "#FFFFFF";
 }
 
 function getEraserColor(theme: BrowserTheme): string {
-  return theme === "dark" ? "#1a1a1a" : "#faf9f9";
+  return theme === "dark" ? "#1a1a1a" : "#FFFFFF";
 }
 
 function drawWind(windInfo: WindData, progress: number, theme: BrowserTheme) {
