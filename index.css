@@ -145,9 +145,20 @@
   --font-quicksand: "Quicksand", sans-serif;
   --font-norse: "Norse", sans-serif;
   --font-juliusSansOne: "Julius Sans One", sans-serif;
-  /* --font-openSans: "Open Sans", sans-serif; */
+  --font-openSans: "Open Sans", sans-serif;
   --animate-swing: swing 6s linear infinite;
   --animate-blink: blink 0.8s infinite;
   --animate-grass-appear: grass-appear 1.5s linear;
   --animate-fade-in: fadeIn 2s linear forwards;
+  --color-principal-50: #fafafa;
+  --color-principal-100: #f5f5f5;
+  --color-principal-200: #e6e6e6;
+  --color-principal-300: #d6d6d6;
+  --color-principal-400: #a5a5a5;
+  --color-principal-500: #767676;
+  --color-principal-600: #575757;
+  --color-principal-700: #434343;
+  --color-principal-800: #222222;
+  --color-principal-900: #1a1a1a;
+  --color-principal-950: #0a0a0a;
 }
