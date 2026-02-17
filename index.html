@@ -8,6 +8,20 @@
       name="description"
       content="Hi! I'm Edgar and here you'll find information about my career as a frontend developer, projects, abilities and more!"
     />
+    <meta name="theme-color" content="#222222" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Edgar Franco - Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Frontend and Full Stack Developer portfolio. Explore my projects, skills, and experience."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Edgar Franco - Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Frontend and Full Stack Developer portfolio"
+    />
     <!--stylesheet-->
     <link href="index.css" rel="stylesheet" />
     <!--fonts-->
@@ -21,10 +35,6 @@
       href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    /> -->
     <!-- Light theme favicon (icon that will appear on Bookmarks) -->
     <link
       rel="icon"
@@ -39,23 +49,32 @@
       href="src/assets/svgs/logo.svg"
       media="(prefers-color-scheme: dark)"
     />
+    <!-- Canonical URL (update with your actual domain) -->
+    <link rel="canonical" href="https://edgarfranco.com" />
     <!--Title of the page-->
-    <title>Edgar Franco - Full Stack Developer</title>
+    <title>Edgar Franco - Full Stack Developer | Portfolio</title>
   </head>
   <body>
     <!--Content that displays on the page-->
-    <header>
+    <header role="banner">
       <nav
         class="min-h-20 h-[10dvh] box-border px-[5%] border-b-2 border-[#eae8e8] dark:border-[#252525] dark:bg-[#1a1a1a] flex flex-row relative transition-colors duration-300"
+        aria-label="Main navigation"
       >
         <!--Logo-->
-        <button class="h-full cursor-pointer" id="logo-button">
+        <button
+          class="h-full cursor-pointer"
+          id="logo-button"
+          aria-label="Edgar Franco - Home"
+          title="Go to home"
+        >
           <svg
             width="86"
             height="76"
             viewBox="0 0 86 76"
             xmlns="http://www.w3.org/2000/svg"
             class="aspect-86/76 h-5/6 text-[#323640] dark:text-[#fcdb4c] transition-colors duration-300"
+            aria-hidden="true"
           >
             <g clip-path="url(#clip0_62_133)">
               <path
@@ -81,6 +100,8 @@
         <button
           id="light-theme-button"
           class="group cursor-pointer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full"
+          aria-label="Toggle dark mode"
+          title="Switch between light and dark theme"
         >
           <svg
             width="92"
@@ -89,6 +110,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             class="h-5/6 dark:hidden aspect-square group-hover:fill-[#FFE671] group-hover:scale-110 transition-all duration-300 animate-[spin_15s_linear_infinite] hover:animate-[spin_10s_linear_infinite]"
+            aria-hidden="true"
           >
             <path
               d="M46.0002 3.83325V11.4999M46.0002 80.4999V88.1666M16.1768 16.1766L21.6202 21.6199M70.3802 70.3799L75.8235 75.8232M3.8335 45.9999H11.5002M80.5002 45.9999H88.1668M16.1768 75.8232L21.6202 70.3799M70.3802 21.6199L75.8235 16.1766M65.1668 45.9999C65.1668 56.5854 56.5856 65.1666 46.0002 65.1666C35.4147 65.1666 26.8335 56.5854 26.8335 45.9999C26.8335 35.4145 35.4147 26.8333 46.0002 26.8333C56.5856 26.8333 65.1668 35.4145 65.1668 45.9999Z"
@@ -104,6 +126,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             class="hidden dark:block aspect-square h-5/6 group-hover:scale-110 transition-all duration-300 group-hover:stroke-[#87CEEB] hover:animate-swing"
+            aria-hidden="true"
           >
             <path
               d="M17.5 10.6583C17.3689 12.0768 16.8365 13.4287 15.9652 14.5557C15.0938 15.6826 13.9196 16.5382 12.5797 17.0221C11.2399 17.5061 9.78997 17.5984 8.39956 17.2884C7.00916 16.9784 5.73581 16.2788 4.7285 15.2715C3.72119 14.2642 3.0216 12.9908 2.71157 11.6004C2.40154 10.21 2.49391 8.76007 2.97786 7.42025C3.46182 6.08042 4.31734 4.90614 5.44432 4.03479C6.57131 3.16345 7.92314 2.63109 9.34165 2.5C8.51116 3.62356 8.11152 5.00787 8.21542 6.40118C8.31932 7.79448 8.91986 9.10422 9.90781 10.0922C10.8958 11.0801 12.2055 11.6807 13.5988 11.7846C14.9921 11.8885 16.3764 11.4888 17.5 10.6583Z"
@@ -118,8 +141,11 @@
       </nav>
     </header>
     <main>
-      <!--Hero-->
-      <section class="min-h-[90dvh] relative dark:bg-[#1a1a1a1] flex flex-col">
+      <!--Hero Section-->
+      <section
+        class="min-h-[90dvh] relative dark:bg-[#1a1a1a1] flex flex-col"
+        aria-labelledby="hero-title"
+      >
         <div
           class="flex-1 relative z-10 flex flex-col items-center justify-between dark:bg-[#1a1a1a] dark:lg:bg-transparent"
         >
@@ -131,8 +157,9 @@
             <div
               class="flex flex-1 flex-col justify-start lg:justify-center gap-y-10 landscape:gap-y-0 lg:landscape:gap-y-10"
             >
-              <h2
+              <h1
                 class="flex flex-col leading-none text-center text-[#222222] dark:text-[#fcdb4c]"
+                id="hero-title"
               >
                 <span
                   class="font-quicksand font-light not-landscape:text-[7dvh] landscape:text-[7dvw] lg:landscape:text-[3dvw] opacity-0 animate-[fadeIn_0.5s_linear_forwards]"
@@ -163,17 +190,19 @@
                     </div>
                   </div>
                 </span>
-              </h2>
-              <h3
+              </h1>
+              <h2
                 class="font-quicksand text-[#222222] font-light text-center not-landscape:text-[4dvh] landscape:text-[5dvw] lg:landscape:text-[3dvw] opacity-0 animate-[fadeIn_0.3s_2s_linear_forwards]"
               >
                 &lt;Full Stack Developer/&gt;
-              </h3>
+              </h2>
             </div>
             <!--Down Arrow Button-->
             <a
               class="nxt-section-arrow block animate-bounce text-[#222222] cursor-pointer mx-auto"
               href="#skills-and-technologies"
+              aria-label="Skip to skills and technologies section"
+              title="Go to skills section"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -184,6 +213,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="lucide lucide-circle-arrow-down-icon lucide-circle-arrow-down aspect-square w-[10dvh] landscape:w-[10dvw] lg:landscape:w-[6dvw]"
+                aria-hidden="true"
               >
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 8v8" />
@@ -198,6 +228,7 @@
               background-image: url(&quot;./src/assets/svgs/grass-light.svg&quot;);
               background-repeat: repeat-x;
             "
+            aria-hidden="true"
           ></div>
         </div>
 
@@ -207,19 +238,22 @@
           width="900"
           height="600"
           class="hidden lg:block absolute w-full h-full top-0 left-0 pointer-events-none"
+          aria-hidden="true"
         >
         </canvas>
         <div
           class="lg:hidden bgHexagon absolute top-0 left-0 h-full w-full"
+          aria-hidden="true"
         ></div>
       </section>
-      <!--Skills & Technologies-->
-      <section id="skills-and-technologies">
+      <!--Skills & Technologies Section-->
+      <section id="skills-and-technologies" aria-labelledby="skills-heading">
         <div
           class="bg-[#222222] px-[5%] py-4 flex flex-col lg:landscape:flex-row landscape:py-16 sm:py-16 gap-3 lg:landscape:justify-between"
         >
           <div class="flex-2 flex flex-col justify-center">
             <h2
+              id="skills-heading"
               class="font-juliusSansOne text-[#f2f2f2] text-center text-[2.5dvh] sm:landscape:text-[24px] landscape:text-[16px] lg:landscape:text-[1.5dvw] lg:landscape:text-left"
             >
               Built with modern firepower
@@ -235,101 +269,105 @@
           <div
             id="static-tech-cards-container"
             class="w-full flex flex-wrap justify-center landscape:hidden sm:hidden opacity-0"
+            role="region"
+            aria-label="Technology stack"
           >
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/react.svg"
-              alt="React JS"
+              alt="React JS logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/tailwind.svg"
-              alt="Tailwind CSS"
+              alt="Tailwind CSS logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/postman.svg"
-              alt="Postman"
+              alt="Postman API testing tool logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/nextJS.svg"
-              alt="Next JS"
+              alt="Next JS logo"
             />
 
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/sqlServer.svg"
-              alt="Microsoft SQL Server"
+              alt="Microsoft SQL Server logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/mysql.svg"
-              alt="MySQL"
+              alt="MySQL database logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/prisma.svg"
-              alt="Prisma ORM"
+              alt="Prisma ORM logo"
             />
 
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/dynamoDB.svg"
-              alt="AWS Dynamo DB"
+              alt="AWS DynamoDB logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/awsLambda.svg"
-              alt="AWS Lambda"
+              alt="AWS Lambda logo"
             />
             <img
               class="w-16 p-2 aspect-square filter-[contrast(0%)_brightness(180%)]"
               src="/src/assets/svgs/shadcnUI.svg"
-              alt="Shadcn UI"
+              alt="Shadcn UI component library logo"
             />
 
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/vitejs.svg"
-              alt="Vite JS"
+              alt="Vite JS build tool logo"
             />
 
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/html.svg"
-              alt="HTML5"
+              alt="HTML5 logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/css.svg"
-              alt="CSS3"
+              alt="CSS3 logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/javascript.svg"
-              alt="JavaScript"
+              alt="JavaScript programming language logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/typescript.svg"
-              alt="Typescript"
+              alt="TypeScript programming language logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square"
               src="/src/assets/svgs/git.svg"
-              alt="Git"
+              alt="Git version control logo"
             />
             <img
               class="grayscale w-16 p-2 aspect-square filter-[contrast(0%)_brightness(180%)]"
               src="/src/assets/svgs/github.svg"
-              alt="Github"
+              alt="GitHub platform logo"
             />
           </div>
 
           <!--Carousel (only on landscape or larger devices) -->
           <div
             class="techcarousel relative hidden w-full flex-4 overflow-x-auto before:absolute before:left-0 before:z-10 before:h-full before:w-[10%] before:bg-linear-90 before:from-[#222222] before:from-5% before:to-transparent before:to-80% after:absolute after:right-0 after:z-10 after:h-full after:w-[10%] after:bg-linear-90 after:from-transparent after:from-5% after:to-[#222222] after:to-80% landscape:flex sm:flex"
+            role="region"
+            aria-label="Scrollable technology stack carousel"
           >
             <!--group-->
             <div class="carouselgroup">
@@ -338,10 +376,15 @@
               <div
                 class="card transition-colors group hover:bg-[#58c3dbff]/10 active:bg-[#58c3dbff]/10"
               >
-                <a href="https://react.dev/" target="_blank">
+                <a
+                  href="https://react.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit React official website"
+                >
                   <img
                     src="/src/assets/svgs/react.svg"
-                    alt="React JS"
+                    alt="React JS - JavaScript library for building user interfaces"
                     class="filter-[invert(50%)_brightness(150%)] group-hover:filter-[drop-shadow(0px_0px_50px_#58c3dbff)_brightness(1)_saturate(5)] group-active:filter-[drop-shadow(0px_0px_50px_#58c3dbff)_brightness(1)_saturate(5)]"
                   />
                 </a>
@@ -350,10 +393,15 @@
               <div
                 class="card transition-colors group hover:bg-[#00bcffff]/10 active:bg-[#00bcffff]/10"
               >
-                <a href="https://tailwindcss.com/" target="_blank">
+                <a
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Tailwind CSS documentation"
+                >
                   <img
                     src="/src/assets/svgs/tailwind.svg"
-                    alt="Tailwind CSS"
+                    alt="Tailwind CSS - Utility-first CSS framework"
                     class="filter-[invert(50%)_brightness(150%)] group-hover:filter-[drop-shadow(0px_0px_50px_#00bcffff)_brightness(1)_saturate(1.5)] group-active:filter-[drop-shadow(0px_0px_50px_#00bcffff)_brightness(1)_saturate(1.5)]"
                   />
                 </a>
@@ -362,10 +410,15 @@
               <div
                 class="card transition-colors group hover:bg-[#FF6C37]/10 active:bg-[#FF6C37]/10"
               >
-                <a href="https://www.postman.com/" target="_blank">
+                <a
+                  href="https://www.postman.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Postman API testing platform"
+                >
                   <img
                     src="/src/assets/svgs/postman.svg"
-                    alt="Postman"
+                    alt="Postman - API testing and documentation tool"
                     class="w-full grayscale group-active:filter-[drop-shadow(0px_0px_50px_#FF6C37)_brightness(1)_saturate(1)] group-hover:filter-[drop-shadow(0px_0px_50px_#FF6C37)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -374,12 +427,17 @@
               <div
                 class="card transition-colors group hover:bg-[#4F9C43]/10 active:bg-[#4F9C43]/10"
               >
-                <a href="https://nodejs.org" target="_blank">
+                <a
+                  href="https://nodejs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Node.js official website"
+                >
                   <svg
                     viewBox="0 0 267 80"
                     xmlns="http://www.w3.org/2000/svg"
                     class="fill-white filter-[invert(50%)_brightness(150%)] group-hover:filter-[drop-shadow(0px_0px_500px_#BBE059)_brightness(1)_saturate(5)] group-active:filter-[drop-shadow(0px_0px_500px_#BBE059)_brightness(1)_saturate(5)] aspect-267/80 w-full"
-                    aria-label="Node JS"
+                    aria-label="Node JS - JavaScript runtime"
                   >
                     <mask
                       id="a"
@@ -484,10 +542,15 @@
               <div
                 class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
               >
-                <a href="https://nextjs.org" target="_blank">
+                <a
+                  href="https://nextjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Next.js documentation"
+                >
                   <img
                     src="/src/assets/svgs/nextJS.svg"
-                    alt="Next JS"
+                    alt="Next JS - React framework for production"
                     class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#FFFFFF)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#FFFFFF)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -499,10 +562,12 @@
                 <a
                   href="https://www.microsoft.com/en-us/sql-server"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Microsoft SQL Server"
                 >
                   <img
                     src="/src/assets/svgs/sqlServer.svg"
-                    alt="Microsoft SQL Server"
+                    alt="Microsoft SQL Server - Relational database"
                     class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#BD2425)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#BD2425)_brightness(1)_saturate(3)]"
                   />
                 </a>
@@ -511,10 +576,15 @@
               <div
                 class="card transition-colors group p-0! hover:bg-[#F29111]/10 active:bg-[#F29111]/10"
               >
-                <a href="https://www.mysql.com/" target="_blank">
+                <a
+                  href="https://www.mysql.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MySQL official website"
+                >
                   <img
                     src="/src/assets/svgs/mysql.svg"
-                    alt="MySQL"
+                    alt="MySQL - Open source relational database"
                     class="w-[80%] grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F29111)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F29111)_brightness(1)_saturate(1)] mx-auto"
                   />
                 </a>
@@ -523,10 +593,15 @@
               <div
                 class="card transition-colors group hover:bg-[#16A394]/10 active:bg-[#16A394]/10"
               >
-                <a href="https://www.prisma.io/" target="_blank">
+                <a
+                  href="https://www.prisma.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Prisma documentation"
+                >
                   <img
                     src="/src/assets/svgs/prisma.svg"
-                    alt="Prisna ORM"
+                    alt="Prisma - Modern database ORM"
                     class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#16A394)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#16A394)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -535,10 +610,15 @@
               <div
                 class="card transition-colors group hover:bg-[#1A476F]/10 active:bg-[#1A476F]/10"
               >
-                <a href="https://aws.amazon.com/dynamodb/" target="_blank">
+                <a
+                  href="https://aws.amazon.com/dynamodb/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit AWS DynamoDB"
+                >
                   <img
                     src="/src/assets/svgs/dynamoDB.svg"
-                    alt="AWS DynamoDB"
+                    alt="AWS DynamoDB - NoSQL database service"
                     class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#1A476F)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#1A476F)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -547,10 +627,15 @@
               <div
                 class="card transition-colors group hover:bg-[#F68536]/10 active:bg-[#F68536]/10"
               >
-                <a href="https://aws.amazon.com/pm/lambda" target="_blank">
+                <a
+                  href="https://aws.amazon.com/pm/lambda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit AWS Lambda"
+                >
                   <img
                     src="/src/assets/svgs/awsLambda.svg"
-                    alt="AWS Lambda"
+                    alt="AWS Lambda - Serverless compute service"
                     class="aspect-square w-full grayscale group-active:filter-[drop-shadow(0px_0px_50px_#F68536)_brightness(1)_saturate(1)] group-hover:filter-[drop-shadow(0px_0px_50px_#F68536)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -559,11 +644,17 @@
               <div
                 class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
               >
-                <a href="https://ui.shadcn.com/" target="_blank">
+                <a
+                  href="https://ui.shadcn.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Shadcn UI component library"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 256 256"
                     class="text-[#979797] group-hover:text-white aspect-square w-full group-hover:filter-[drop-shadow(0px_0px_50px_#F2F2F2)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F2F2F2)_brightness(1)_saturate(1)]"
+                    aria-label="Shadcn UI - High-quality component library"
                   >
                     <rect width="256" height="256" fill="none"></rect>
                     <line
@@ -595,10 +686,15 @@
               <div
                 class="card transition-colors group hover:bg-[#9043FF]/10 active:bg-[#9043FF]/10"
               >
-                <a href="https://vite.dev/" target="_blank">
+                <a
+                  href="https://vite.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Vite build tool documentation"
+                >
                   <img
                     src="/src/assets/svgs/vitejs.svg"
-                    alt="Vite"
+                    alt="Vite - Next generation build tool"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#9043FF)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#9043FF)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -610,10 +706,12 @@
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MDN HTML documentation"
                 >
                   <img
                     src="/src/assets/svgs/html.svg"
-                    alt="HTML5"
+                    alt="HTML5 - Markup language for web"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F16529)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F16529)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -625,10 +723,12 @@
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MDN CSS documentation"
                 >
                   <img
                     src="/src/assets/svgs/css.svg"
-                    alt="CSS3"
+                    alt="CSS3 - Styling language for web"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#2965F1)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#2965F1)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -640,10 +740,12 @@
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MDN JavaScript documentation"
                 >
                   <img
                     src="/src/assets/svgs/javascript.svg"
-                    alt="JavaScript"
+                    alt="JavaScript - Programming language for web"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F7DF1E)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F7DF1E)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -653,10 +755,15 @@
               <div
                 class="card transition-colors group hover:bg-[#3178C6]/10 active:bg-[#3178C6]/10"
               >
-                <a href="https://www.typescriptlang.org/" target="_blank">
+                <a
+                  href="https://www.typescriptlang.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit TypeScript official website"
+                >
                   <img
                     src="/src/assets/svgs/typescript.svg"
-                    alt="TypeScript"
+                    alt="TypeScript - Typed superset of JavaScript"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#3178C6)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#3178C6)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -665,10 +772,15 @@
               <div
                 class="card transition-colors group hover:bg-[#F54D27]/10 active:bg-[#F54D27]/10"
               >
-                <a href="https://git-scm.com/" target="_blank">
+                <a
+                  href="https://git-scm.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Git version control documentation"
+                >
                   <img
                     src="/src/assets/svgs/git.svg"
-                    alt="Git"
+                    alt="Git - Distributed version control system"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F54D27)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F54D27)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -677,26 +789,34 @@
               <div
                 class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
               >
-                <a href="https://github.com" target="_blank">
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit GitHub platform"
+                >
                   <img
                     src="/src/assets/svgs/github.svg"
-                    alt="Git"
+                    alt="GitHub - Version control and collaboration platform"
                     class="aspect-square w-full filter-[invert(50%)_brightness(150%)] group-hover:filter-[invert(50%)_brightness(200%)] group-active:filter-[invert(50%)_brightness(200%)]"
                   />
                 </a>
               </div>
             </div>
             <!--other group for carousel effect-->
-            <div aria-hidden class="carouselgroup">
-              <!--cards-->
-              <!--react-->
+            <div aria-hidden="true" class="carouselgroup">
               <div
                 class="card transition-colors group hover:bg-[#58c3dbff]/10 active:bg-[#58c3dbff]/10"
               >
-                <a href="https://react.dev/" target="_blank">
+                <a
+                  href="https://react.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit React official website"
+                >
                   <img
                     src="/src/assets/svgs/react.svg"
-                    alt="React JS"
+                    alt="React JS - JavaScript library for building user interfaces"
                     class="filter-[invert(50%)_brightness(150%)] group-hover:filter-[drop-shadow(0px_0px_50px_#58c3dbff)_brightness(1)_saturate(5)] group-active:filter-[drop-shadow(0px_0px_50px_#58c3dbff)_brightness(1)_saturate(5)]"
                   />
                 </a>
@@ -705,10 +825,15 @@
               <div
                 class="card transition-colors group hover:bg-[#00bcffff]/10 active:bg-[#00bcffff]/10"
               >
-                <a href="https://tailwindcss.com/" target="_blank">
+                <a
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Tailwind CSS documentation"
+                >
                   <img
                     src="/src/assets/svgs/tailwind.svg"
-                    alt="Tailwind CSS"
+                    alt="Tailwind CSS - Utility-first CSS framework"
                     class="filter-[invert(50%)_brightness(150%)] group-hover:filter-[drop-shadow(0px_0px_50px_#00bcffff)_brightness(1)_saturate(1.5)] group-active:filter-[drop-shadow(0px_0px_50px_#00bcffff)_brightness(1)_saturate(1.5)]"
                   />
                 </a>
@@ -717,10 +842,15 @@
               <div
                 class="card transition-colors group hover:bg-[#FF6C37]/10 active:bg-[#FF6C37]/10"
               >
-                <a href="https://www.postman.com/" target="_blank">
+                <a
+                  href="https://www.postman.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Postman API testing platform"
+                >
                   <img
                     src="/src/assets/svgs/postman.svg"
-                    alt="Postman"
+                    alt="Postman - API testing and documentation tool"
                     class="w-full grayscale group-active:filter-[drop-shadow(0px_0px_50px_#FF6C37)_brightness(1)_saturate(1)] group-hover:filter-[drop-shadow(0px_0px_50px_#FF6C37)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -729,12 +859,17 @@
               <div
                 class="card transition-colors group hover:bg-[#4F9C43]/10 active:bg-[#4F9C43]/10"
               >
-                <a href="https://nodejs.org" target="_blank">
+                <a
+                  href="https://nodejs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Node.js official website"
+                >
                   <svg
                     viewBox="0 0 267 80"
                     xmlns="http://www.w3.org/2000/svg"
                     class="fill-white filter-[invert(50%)_brightness(150%)] group-hover:filter-[drop-shadow(0px_0px_500px_#BBE059)_brightness(1)_saturate(5)] group-active:filter-[drop-shadow(0px_0px_500px_#BBE059)_brightness(1)_saturate(5)] aspect-267/80 w-full"
-                    aria-label="Node JS"
+                    aria-label="Node JS - JavaScript runtime"
                   >
                     <mask
                       id="a"
@@ -839,10 +974,15 @@
               <div
                 class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
               >
-                <a href="https://nextjs.org" target="_blank">
+                <a
+                  href="https://nextjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Next.js documentation"
+                >
                   <img
                     src="/src/assets/svgs/nextJS.svg"
-                    alt="Next JS"
+                    alt="Next JS - React framework for production"
                     class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#FFFFFF)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#FFFFFF)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -854,10 +994,12 @@
                 <a
                   href="https://www.microsoft.com/en-us/sql-server"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Microsoft SQL Server"
                 >
                   <img
                     src="/src/assets/svgs/sqlServer.svg"
-                    alt="Microsoft SQL Server"
+                    alt="Microsoft SQL Server - Relational database"
                     class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#BD2425)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#BD2425)_brightness(1)_saturate(3)]"
                   />
                 </a>
@@ -866,10 +1008,15 @@
               <div
                 class="card transition-colors group p-0! hover:bg-[#F29111]/10 active:bg-[#F29111]/10"
               >
-                <a href="https://www.mysql.com/" target="_blank">
+                <a
+                  href="https://www.mysql.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MySQL official website"
+                >
                   <img
                     src="/src/assets/svgs/mysql.svg"
-                    alt="MySQL"
+                    alt="MySQL - Open source relational database"
                     class="w-[80%] grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F29111)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F29111)_brightness(1)_saturate(1)] mx-auto"
                   />
                 </a>
@@ -878,10 +1025,15 @@
               <div
                 class="card transition-colors group hover:bg-[#16A394]/10 active:bg-[#16A394]/10"
               >
-                <a href="https://www.prisma.io/" target="_blank">
+                <a
+                  href="https://www.prisma.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Prisma documentation"
+                >
                   <img
                     src="/src/assets/svgs/prisma.svg"
-                    alt="Prisna ORM"
+                    alt="Prisma - Modern database ORM"
                     class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#16A394)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#16A394)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -890,10 +1042,15 @@
               <div
                 class="card transition-colors group hover:bg-[#1A476F]/10 active:bg-[#1A476F]/10"
               >
-                <a href="https://aws.amazon.com/dynamodb/" target="_blank">
+                <a
+                  href="https://aws.amazon.com/dynamodb/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit AWS DynamoDB"
+                >
                   <img
                     src="/src/assets/svgs/dynamoDB.svg"
-                    alt="AWS DynamoDB"
+                    alt="AWS DynamoDB - NoSQL database service"
                     class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#1A476F)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#1A476F)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -902,10 +1059,15 @@
               <div
                 class="card transition-colors group hover:bg-[#F68536]/10 active:bg-[#F68536]/10"
               >
-                <a href="https://aws.amazon.com/pm/lambda" target="_blank">
+                <a
+                  href="https://aws.amazon.com/pm/lambda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit AWS Lambda"
+                >
                   <img
                     src="/src/assets/svgs/awsLambda.svg"
-                    alt="AWS Lambda"
+                    alt="AWS Lambda - Serverless compute service"
                     class="aspect-square w-full grayscale group-active:filter-[drop-shadow(0px_0px_50px_#F68536)_brightness(1)_saturate(1)] group-hover:filter-[drop-shadow(0px_0px_50px_#F68536)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -914,11 +1076,17 @@
               <div
                 class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
               >
-                <a href="https://ui.shadcn.com/" target="_blank">
+                <a
+                  href="https://ui.shadcn.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Shadcn UI component library"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 256 256"
                     class="text-[#979797] group-hover:text-white aspect-square w-full group-hover:filter-[drop-shadow(0px_0px_50px_#F2F2F2)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F2F2F2)_brightness(1)_saturate(1)]"
+                    aria-label="Shadcn UI - High-quality component library"
                   >
                     <rect width="256" height="256" fill="none"></rect>
                     <line
@@ -950,10 +1118,15 @@
               <div
                 class="card transition-colors group hover:bg-[#9043FF]/10 active:bg-[#9043FF]/10"
               >
-                <a href="https://vite.dev/" target="_blank">
+                <a
+                  href="https://vite.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Vite build tool documentation"
+                >
                   <img
                     src="/src/assets/svgs/vitejs.svg"
-                    alt="Vite"
+                    alt="Vite - Next generation build tool"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#9043FF)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#9043FF)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -965,10 +1138,12 @@
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MDN HTML documentation"
                 >
                   <img
                     src="/src/assets/svgs/html.svg"
-                    alt="HTML5"
+                    alt="HTML5 - Markup language for web"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F16529)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F16529)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -980,10 +1155,12 @@
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MDN CSS documentation"
                 >
                   <img
                     src="/src/assets/svgs/css.svg"
-                    alt="CSS3"
+                    alt="CSS3 - Styling language for web"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#2965F1)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#2965F1)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -995,10 +1172,12 @@
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MDN JavaScript documentation"
                 >
                   <img
                     src="/src/assets/svgs/javascript.svg"
-                    alt="JavaScript"
+                    alt="JavaScript - Programming language for web"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F7DF1E)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F7DF1E)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -1008,10 +1187,15 @@
               <div
                 class="card transition-colors group hover:bg-[#3178C6]/10 active:bg-[#3178C6]/10"
               >
-                <a href="https://www.typescriptlang.org/" target="_blank">
+                <a
+                  href="https://www.typescriptlang.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit TypeScript official website"
+                >
                   <img
                     src="/src/assets/svgs/typescript.svg"
-                    alt="TypeScript"
+                    alt="TypeScript - Typed superset of JavaScript"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#3178C6)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#3178C6)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -1020,10 +1204,15 @@
               <div
                 class="card transition-colors group hover:bg-[#F54D27]/10 active:bg-[#F54D27]/10"
               >
-                <a href="https://git-scm.com/" target="_blank">
+                <a
+                  href="https://git-scm.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Git version control documentation"
+                >
                   <img
                     src="/src/assets/svgs/git.svg"
-                    alt="Git"
+                    alt="Git - Distributed version control system"
                     class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F54D27)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F54D27)_brightness(1)_saturate(1)]"
                   />
                 </a>
@@ -1032,10 +1221,15 @@
               <div
                 class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
               >
-                <a href="https://github.com" target="_blank">
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit GitHub platform"
+                >
                   <img
                     src="/src/assets/svgs/github.svg"
-                    alt="Git"
+                    alt="GitHub - Version control and collaboration platform"
                     class="aspect-square w-full filter-[invert(50%)_brightness(150%)] group-hover:filter-[invert(50%)_brightness(200%)] group-active:filter-[invert(50%)_brightness(200%)]"
                   />
                 </a>
