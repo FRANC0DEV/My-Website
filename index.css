@@ -146,7 +146,7 @@
   --font-norse: "Norse", sans-serif;
   --font-juliusSansOne: "Julius Sans One", sans-serif;
   --font-openSans: "Open Sans", sans-serif;
-  --animate-swing: swing 6s linear infinite;
+  --animate-swing: swing 0.8s linear forwards;
   --animate-blink: blink 0.8s infinite;
   --animate-grass-appear: grass-appear 1.5s linear;
   --animate-fade-in: fadeIn 2s linear forwards;
