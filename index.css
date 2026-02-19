@@ -67,6 +67,10 @@
   animation: carousel-spin 40s linear infinite;
 }
 
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @font-face {
