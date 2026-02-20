@@ -60,24 +60,22 @@
   </head>
   <body>
     <!--Content that displays on the page-->
-    <header role="banner">
+    <header role="banner" class="absolute w-full z-30 py-2">
       <nav
-        class="min-h-20 h-[10dvh] box-border px-[5%] border-b-2 border-[#eae8e8] dark:border-[#252525] dark:bg-principal-900 flex flex-row relative transition-colors duration-300"
+        class="box-border min-h-10 px-[5%] border-principal-300 dark:border-principal-700 dark:bg-principal-900 flex flex-row relative transition-colors duration-300 bg-principal-200/15 backdrop-blur-xs justify-between items-center"
         aria-label="Main navigation"
       >
         <!--Logo-->
         <button
-          class="h-full cursor-pointer"
+          class="block cursor-pointer"
           id="logo-button"
           aria-label="Edgar Franco - Home"
           title="Go to home"
         >
           <svg
-            width="86"
-            height="76"
             viewBox="0 0 86 76"
             xmlns="http://www.w3.org/2000/svg"
-            class="aspect-86/76 h-5/6 text-[#323640] dark:text-[#fcdb4c] transition-colors duration-300"
+            class="aspect-86/76 w-10 text-principal-900 transition-colors duration-300"
             aria-hidden="true"
           >
             <g clip-path="url(#clip0_62_133)">
@@ -100,133 +98,112 @@
             </defs>
           </svg>
         </button>
-        <!--Light/Dark Theme Button-->
-        <button
-          id="light-theme-button"
-          class="group cursor-pointer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full"
-          aria-label="Toggle dark mode"
-          title="Switch between light and dark theme"
+        <div
+          class="box-border border-l border-l-principal-300 pl-2 py-1 flex flex-row"
         >
-          <svg
-            width="92"
-            height="92"
-            viewBox="0 0 92 92"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5/6 dark:hidden aspect-square group-hover:fill-[#FFE671] group-hover:scale-110 transition-all duration-300 animate-[spin_15s_linear_infinite] hover:animate-[spin_10s_linear_infinite]"
-            aria-hidden="true"
-          >
-            <path
-              d="M46.0002 3.83325V11.4999M46.0002 80.4999V88.1666M16.1768 16.1766L21.6202 21.6199M70.3802 70.3799L75.8235 75.8232M3.8335 45.9999H11.5002M80.5002 45.9999H88.1668M16.1768 75.8232L21.6202 70.3799M70.3802 21.6199L75.8235 16.1766M65.1668 45.9999C65.1668 56.5854 56.5856 65.1666 46.0002 65.1666C35.4147 65.1666 26.8335 56.5854 26.8335 45.9999C26.8335 35.4145 35.4147 26.8333 46.0002 26.8333C56.5856 26.8333 65.1668 35.4145 65.1668 45.9999Z"
-              stroke="#323640"
-              stroke-width="1.92593"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="group-hover:stroke-[#FFE671] stroke-[2.5] transition-colors duration-300"
-            />
-          </svg>
-          <svg
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="hidden dark:block aspect-square h-5/6 group-hover:scale-110 transition-all duration-300 group-hover:stroke-[#87CEEB] hover:animate-swing"
-            aria-hidden="true"
-          >
-            <path
-              d="M17.5 10.6583C17.3689 12.0768 16.8365 13.4287 15.9652 14.5557C15.0938 15.6826 13.9196 16.5382 12.5797 17.0221C11.2399 17.5061 9.78997 17.5984 8.39956 17.2884C7.00916 16.9784 5.73581 16.2788 4.7285 15.2715C3.72119 14.2642 3.0216 12.9908 2.71157 11.6004C2.40154 10.21 2.49391 8.76007 2.97786 7.42025C3.46182 6.08042 4.31734 4.90614 5.44432 4.03479C6.57131 3.16345 7.92314 2.63109 9.34165 2.5C8.51116 3.62356 8.11152 5.00787 8.21542 6.40118C8.31932 7.79448 8.91986 9.10422 9.90781 10.0922C10.8958 11.0801 12.2055 11.6807 13.5988 11.7846C14.9921 11.8885 16.3764 11.4888 17.5 10.6583Z"
-              stroke="#EBF2F2"
-              stroke-width="0.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="group-hover:fill-[#87CEEB] group-hover:stroke-[#87CEEB] transition-all duration-300"
-            />
-          </svg>
-        </button>
+          <!--Language button-->
+          <div class="relative flex justify-center">
+            <button id="languageButton" class="cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-languages-icon lucide-languages w-6 aspect-square fill-none stroke-[1.5] stroke-current"
+              >
+                <path d="m5 8 6 6" />
+                <path d="m4 14 6-6 2-3" />
+                <path d="M2 5h12" />
+                <path d="M7 2h1" />
+                <path d="m22 22-5-10-5 10" />
+                <path d="M14 18h6" />
+              </svg>
+            </button>
+            <ul
+              id="languageDropdown"
+              class="absolute top-[150%] right-0 aspect-[6] rounded-md translate bg-principal-50 backdrop-blur-2xl shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)] px-3 py-4 font-openSans flex flex-col gap-y-2"
+            >
+              <p
+                data-lang-es="Idiomas"
+                class="text-[12px] font-medium text-principal-500 px-2"
+              >
+                Languages
+              </p>
+              <li
+                id="lang-es"
+                class="flex items-center gap-2 hover:bg-principal-200/40 px-2 py-1 rounded-md cursor-pointer text-[16px] font-medium text-principal-700 transition-colors hover:text-principal-800"
+              >
+                <img src="/src/assets/svgs/spanish.svg" alt="" class="" />
+                <p data-lang-es="Español">Spanish</p>
+              </li>
+              <li
+                id="lang-en"
+                class="flex items-center gap-2 hover:bg-principal-200/40 px-2 py-1 rounded-md cursor-pointer text-[16px] font-medium text-principal-700 transition-colors hover:text-principal-800"
+              >
+                <img src="/src/assets/svgs/english.svg" alt="" srcset="" />
+                <p data-lang-es="Inglés">English</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
       <!--Hero Section-->
       <section
-        class="min-h-[90dvh] relative dark:bg-[#1a1a1a1] flex flex-col"
+        class="min-h-dvh relative dark:bg-[#1a1a1a1] flex flex-col"
         aria-labelledby="hero-title"
       >
         <div
           class="flex-1 relative z-10 flex flex-col items-center justify-between dark:bg-principal-900 dark:lg:bg-transparent"
         >
-          <!--Text & button container-->
+          <!--Text-->
           <div
-            class="flex-1 flex flex-col justify-between mt-10 landscape:gap-y-10 lg:landscape:gap-y-0"
+            class="flex flex-1 flex-col justify-center lg:justify-center gap-y-10 landscape:gap-y-0 lg:landscape:gap-y-10"
           >
-            <!--Text-->
-            <div
-              class="flex flex-1 flex-col justify-start lg:justify-center gap-y-10 landscape:gap-y-0 lg:landscape:gap-y-10"
+            <h1
+              class="flex flex-col leading-none text-center text-principal-800 dark:text-[#fcdb4c]"
+              id="hero-title"
             >
-              <h1
-                class="flex flex-col leading-none text-center text-principal-800 dark:text-[#fcdb4c]"
-                id="hero-title"
+              <span
+                class="font-quicksand font-light not-landscape:text-[7dvh] landscape:text-[7dvw] lg:landscape:text-[3dvw] opacity-0 animate-[fadeIn_0.5s_linear_forwards]"
+                data-lang-es="Soy"
+                >I'm</span
               >
-                <span
-                  class="font-quicksand font-light not-landscape:text-[7dvh] landscape:text-[7dvw] lg:landscape:text-[3dvw] opacity-0 animate-[fadeIn_0.5s_linear_forwards]"
-                  data-lang-es="Soy"
-                  >I'm</span
+              <span
+                class="font-norse not-landscape:text-[14dvh] landscape:text-[20dvw] lg:landscape:text-[16dvw]"
+              >
+                <div
+                  class="inline-flex flex-wrap gap-x-[0.5ch] wrap-anywhere justify-center leading-none"
+                  id="my-name"
                 >
-                <span
-                  class="font-norse not-landscape:text-[14dvh] landscape:text-[20dvw] lg:landscape:text-[16dvw]"
-                >
-                  <div
-                    class="inline-flex flex-wrap gap-x-[0.5ch] wrap-anywhere justify-center leading-none"
-                    id="my-name"
-                  >
-                    <div class="inline-flex flex-nowrap gap-0">
-                      <span class="opacity-0">E</span>
-                      <span class="opacity-0">D</span>
-                      <span class="opacity-0">G</span>
-                      <span class="opacity-0">A</span>
-                      <span class="opacity-0">R</span>
-                    </div>
-                    <!-- &nbsp; -->
-                    <div class="flex flex-nowrap gap-0">
-                      <span class="opacity-0">F</span>
-                      <span class="opacity-0">R</span>
-                      <span class="opacity-0">A</span>
-                      <span class="opacity-0">N</span>
-                      <span class="opacity-0">C</span>
-                      <span class="opacity-0">O</span>
-                    </div>
+                  <div class="inline-flex flex-nowrap gap-0">
+                    <span class="opacity-0">E</span>
+                    <span class="opacity-0">D</span>
+                    <span class="opacity-0">G</span>
+                    <span class="opacity-0">A</span>
+                    <span class="opacity-0">R</span>
                   </div>
-                </span>
-              </h1>
-              <h2
-                class="font-quicksand text-principal-800 font-light text-center not-landscape:text-[4dvh] landscape:text-[5dvw] lg:landscape:text-[3dvw] opacity-0 animate-[fadeIn_0.3s_2s_linear_forwards]"
-                data-lang-es="&lt;Desarrollador Full Stack/&gt;"
-              >
-                &lt;Full Stack Developer/&gt;
-              </h2>
-            </div>
-            <!--Down Arrow Button-->
-            <a
-              class="nxt-section-arrow block animate-bounce text-principal-800 cursor-pointer mx-auto"
-              href="#skills-and-technologies"
-              aria-label="Skip to skills and technologies section"
-              title="Go to skills section"
+                  <!-- &nbsp; -->
+                  <div class="flex flex-nowrap gap-0">
+                    <span class="opacity-0">F</span>
+                    <span class="opacity-0">R</span>
+                    <span class="opacity-0">A</span>
+                    <span class="opacity-0">N</span>
+                    <span class="opacity-0">C</span>
+                    <span class="opacity-0">O</span>
+                  </div>
+                </div>
+              </span>
+            </h1>
+            <h2
+              class="font-quicksand text-principal-800 font-light text-center not-landscape:text-[4dvh] landscape:text-[5dvw] lg:landscape:text-[3dvw] opacity-0 animate-[fadeIn_0.3s_2s_linear_forwards]"
+              data-lang-es="&lt;Desarrollador Full Stack/&gt;"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="0.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-circle-arrow-down-icon lucide-circle-arrow-down aspect-square w-[10dvh] landscape:w-[10dvw] lg:landscape:w-[6dvw]"
-                aria-hidden="true"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 8v8" />
-                <path d="m8 12 4 4 4-4" />
-              </svg>
-            </a>
+              &lt;Full Stack Developer/&gt;
+            </h2>
           </div>
+          <!-- </div> -->
           <!--Grass container-->
           <div
             class="w-full h-12 animate-grass-appear"
@@ -247,10 +224,6 @@
           aria-hidden="true"
         >
         </canvas>
-        <div
-          class="lg:hidden bgHexagon absolute top-0 left-0 h-full w-full"
-          aria-hidden="true"
-        ></div>
       </section>
       <!--Skills & Technologies Section-->
       <section
@@ -2174,9 +2147,34 @@
       <!--Legal-->
       <div
         class="text-principal-400 text-center mt-10 font-quicksand"
-        data-lang-es="© 2026 Edgar Franco | Portfolio. Todos los derechos reservados."
+        data-lang-es="© 2026 Edgar Franco | Portfolio"
       >
-        <p>© 2026 Edgar Franco | Portfolio. All rights reserved.</p>
+        <svg
+          viewBox="0 0 86 76"
+          xmlns="http://www.w3.org/2000/svg"
+          class="aspect-86/76 mx-auto w-16 mb-2 text-principal-400 transition-colors duration-300"
+          aria-hidden="true"
+        >
+          <g clip-path="url(#clip0_62_133)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M27.1026 17.4884C37.6119 6.94281 41.8881 3.21018 45.5483 1.36199C47.4327 0.456003 47.7951 0.383531 48.23 0.818399C48.6648 1.25327 48.6648 1.72438 48.3387 3.64506C48.1212 4.94966 47.9401 6.14555 47.9401 6.36298C47.9401 6.54418 48.991 5.67445 50.2231 4.40608C51.8901 2.73908 52.7961 2.12301 53.4846 2.12301C54.7168 2.12301 54.7168 2.34044 53.5209 8.53733C52.941 11.6177 52.6511 13.8645 52.8323 14.6617C53.0135 15.6764 53.8833 16.7999 56.7824 19.6265C60.8049 23.6128 62.6169 26.1496 65.1899 31.4042C66.422 33.9047 67.4367 35.3543 69.1762 37.0938C71.4955 39.4131 78.3084 44.1604 83.1645 46.8421C84.5053 47.6031 85.7012 48.3279 85.8099 48.5091C86.426 49.4876 83.9255 52.7853 81.6424 53.945C80.9539 54.3074 79.5768 55.2858 78.6346 56.1556L76.8589 57.6776L74.1047 57.0253C70.662 56.228 63.8853 53.8725 60.2976 52.278C57.5434 51.0096 56.42 50.6834 58.1957 51.6257L59.1742 52.0877L59.0383 54.5339L60.8049 52.9031C60.8049 52.9031 61.7109 53.2564 63.233 53.9087C65.4798 54.8509 72.5464 57.134 74.8295 57.6051L76.6777 58.0037L75.5543 58.6923C73.3437 60.1056 71.423 59.9969 65.8422 58.0762C60.66 56.3005 56.8549 55.7207 53.9557 56.2643C49.9694 57.0253 48.1212 62.0625 48.3749 71.2673C48.4836 74.7462 48.4112 75.326 47.9038 75.326C46.9616 75.326 36.3073 71.8109 31.9224 70.0351C24.4571 67.0273 17.8253 63.2222 11.9184 58.5111C8.14949 55.5032 2.67738 50.3573 1.48149 48.7265L0.466797 47.277L3.00354 44.9577C4.41686 43.6893 7.02608 40.6452 8.8018 38.2534C14.9624 29.9547 16.9556 27.6716 27.1026 17.4884ZM17.2455 38.8332C18.5864 36.224 21.3768 33.6148 24.6745 31.8753C28.2984 29.9547 27.5012 29.9547 23.6961 31.8753C20.3621 33.5423 17.318 36.2603 16.0859 38.6883C14.3826 41.9861 14.4913 46.3347 16.3033 50.3935C17.5717 53.2927 17.9703 53.039 16.8831 50.0311C16.0859 47.9293 16.0134 47.132 16.1221 44.1604C16.2671 41.3337 16.4483 40.3915 17.2455 38.8332ZM19.4199 39.558C20.7607 36.9488 23.5511 34.3396 26.8489 32.6001C30.4728 30.6794 29.6755 30.6794 25.8704 32.6001C22.5364 34.2671 19.4923 36.9851 18.2602 39.4131C16.557 42.7108 16.6657 47.0595 18.4776 51.1183C19.746 54.0174 20.1446 53.7638 19.0575 50.7559C18.2602 48.6541 18.1877 47.8568 18.2964 44.8852C18.4414 42.0585 18.6226 41.1163 19.4199 39.558ZM60.1255 31.5673C58.6306 30.616 55.9127 30.7519 55.9127 30.7519C55.9127 30.7519 56.8911 33.334 58.1957 34.1493C59.5003 34.9647 62.1639 34.9647 62.1639 34.9647C62.1639 34.9647 61.6203 32.5186 60.1255 31.5673Z"
+              fill="currentColor"
+              class="navbar-logo"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_62_133">
+              <rect
+                width="85.5243"
+                height="75.3774"
+                transform="translate(0.466797 0.311279)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+        <p>© 2026 Edgar Franco | Portfolio</p>
       </div>
     </footer>
     <script type="module" src="./src/functions/main.ts"></script>

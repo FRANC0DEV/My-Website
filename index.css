@@ -29,6 +29,21 @@
   border-color: oklch(37.1% 0 0);
 }
 
+#languageDropdown {
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+}
+
+#languageDropdown.active {
+  display: absolute;
+  visibility: visible;
+  opacity: 1;
+}
+
 @media (width >= 46rem) {
   @media (orientation: landscape) {
     .techcarousel .carouselgroup .card {
