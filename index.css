@@ -92,12 +92,14 @@
   font-family: "Norse";
   src: url("src/assets/fonts/Norse.otf") format("opentype");
   font-weight: normal;
+  font-display: optional;
 }
 
 @font-face {
   font-family: "Norse";
   src: url("src/assets/fonts/Norse-Bold.otf") format("opentype");
   font-weight: bold;
+  font-display: optional;
 }
 
 @keyframes swing {

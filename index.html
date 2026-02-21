@@ -22,25 +22,15 @@
       name="twitter:description"
       content="Frontend and Full Stack Developer portfolio"
     />
-    <!--stylesheet-->
-    <link rel="preload" href="index.css" rel="stylesheet" />
     <!--fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Async load fonts (non-blocking) -->
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap" 
-      rel="stylesheet" 
-      media="print" 
-      onload="this.media='all'"
+    <!-- Preload Norse font FIRST -->
+    <link
+      rel="preload"
+      href="/src/assets/fonts/Norse.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
     />
-    <!-- Fallback for users without JS -->
-    <noscript>
-      <link 
-        href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap" 
-        rel="stylesheet" 
-      />
-    </noscript>
     <!-- Light theme favicon (icon that will appear on Bookmarks) -->
     <link
       rel="icon"
@@ -2022,48 +2012,120 @@
             </p>
           </div>
           <div class="grid grid-cols-3 gap-4">
-            <div class="project-card rounded-md border-principal-700 aspect-5/6 col-span-1 flex flex-col overflow-hidden">
-              <img src="https://images.pexels.com/photos/36205940/pexels-photo-36205940.jpeg" alt="Project #1 Image" class="h-0 flex-[3_3_0] object-cover w-full">
-              <div class="project-description flex-4 px-2 bg-principal-50 py-2 flex flex-col justify-between">
+            <div
+              class="project-card rounded-md border-principal-700 aspect-5/6 col-span-1 flex flex-col overflow-hidden"
+            >
+              <img
+                src="https://images.pexels.com/photos/36205940/pexels-photo-36205940.jpeg"
+                alt="Project #1 Image"
+                class="h-0 flex-[3_3_0] object-cover w-full"
+              />
+              <div
+                class="project-description flex-4 px-2 bg-principal-50 py-2 flex flex-col justify-between"
+              >
                 <div>
-                  <h3 class="font-openSans font-bold text-[14px] text-principal-500">Lorem ipsum dolor</h3>
-                  <p class="font-quicksand font-normal text-principal-500 text-[16px]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores suscipit accusantium ab deserunt ipsa ut ipsam itaque, hic fuga quod ea laboriosam.
+                  <h3
+                    class="font-openSans font-bold text-[14px] text-principal-500"
+                  >
+                    Lorem ipsum dolor
+                  </h3>
+                  <p
+                    class="font-quicksand font-normal text-principal-500 text-[16px]"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores suscipit accusantium ab deserunt ipsa ut ipsam
+                    itaque, hic fuga quod ea laboriosam.
                   </p>
                 </div>
                 <div class="flex flex-row justify-end">
-                  <img src="/src/assets/svgs/github.svg" alt="See Github Repo" class="w-8">
-                  <img src="/src/assets//svgs/application.svg" alt="See Application" class="w-8">
+                  <img
+                    src="/src/assets/svgs/github.svg"
+                    alt="See Github Repo"
+                    class="w-8"
+                  />
+                  <img
+                    src="/src/assets//svgs/application.svg"
+                    alt="See Application"
+                    class="w-8"
+                  />
                 </div>
               </div>
             </div>
-            <div class="project-card rounded-md border-principal-700 aspect-5/6 col-span-1 flex flex-col overflow-hidden">
-              <img src="https://images.pexels.com/photos/36223086/pexels-photo-36223086.jpeg" alt="Project #2 Image" class="h-0 flex-[3_3_0] object-cover w-full">
-              <div class="project-description flex-4 px-2 bg-principal-50 py-2 flex flex-col justify-between">
+            <div
+              class="project-card rounded-md border-principal-700 aspect-5/6 col-span-1 flex flex-col overflow-hidden"
+            >
+              <img
+                src="https://images.pexels.com/photos/36223086/pexels-photo-36223086.jpeg"
+                alt="Project #2 Image"
+                class="h-0 flex-[3_3_0] object-cover w-full"
+              />
+              <div
+                class="project-description flex-4 px-2 bg-principal-50 py-2 flex flex-col justify-between"
+              >
                 <div>
-                  <h3 class="font-openSans font-bold text-[14px] text-principal-500">Lorem ipsum dolor</h3>
-                  <p class="font-quicksand font-normal text-principal-500 text-[16px]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores suscipit accusantium ab deserunt ipsa ut ipsam itaque, hic fuga quod ea laboriosam.
+                  <h3
+                    class="font-openSans font-bold text-[14px] text-principal-500"
+                  >
+                    Lorem ipsum dolor
+                  </h3>
+                  <p
+                    class="font-quicksand font-normal text-principal-500 text-[16px]"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores suscipit accusantium ab deserunt ipsa ut ipsam
+                    itaque, hic fuga quod ea laboriosam.
                   </p>
                 </div>
                 <div class="flex flex-row justify-end">
-                  <img src="/src/assets/svgs/github.svg" alt="See Github Repo" class="w-8">
-                  <img src="/src/assets//svgs/application.svg" alt="See Application" class="w-8">
+                  <img
+                    src="/src/assets/svgs/github.svg"
+                    alt="See Github Repo"
+                    class="w-8"
+                  />
+                  <img
+                    src="/src/assets//svgs/application.svg"
+                    alt="See Application"
+                    class="w-8"
+                  />
                 </div>
               </div>
             </div>
-            <div class="project-card rounded-md border-principal-700 aspect-5/6 col-span-1 flex flex-col overflow-hidden">
-              <img src="https://images.pexels.com/photos/242254/pexels-photo-242254.jpeg" alt="Project #3 Image" class="h-0 flex-[3_3_0] object-cover w-full">
-              <div class="project-description flex-4 px-2 bg-principal-50 py-2 flex flex-col justify-between">
+            <div
+              class="project-card rounded-md border-principal-700 aspect-5/6 col-span-1 flex flex-col overflow-hidden"
+            >
+              <img
+                src="https://images.pexels.com/photos/242254/pexels-photo-242254.jpeg"
+                alt="Project #3 Image"
+                class="h-0 flex-[3_3_0] object-cover w-full"
+              />
+              <div
+                class="project-description flex-4 px-2 bg-principal-50 py-2 flex flex-col justify-between"
+              >
                 <div>
-                  <h3 class="font-openSans font-bold text-[14px] text-principal-500">Lorem ipsum dolor</h3>
-                  <p class="font-quicksand font-normal text-principal-500 text-[16px]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores suscipit accusantium ab deserunt ipsa ut ipsam itaque, hic fuga quod ea laboriosam.
+                  <h3
+                    class="font-openSans font-bold text-[14px] text-principal-500"
+                  >
+                    Lorem ipsum dolor
+                  </h3>
+                  <p
+                    class="font-quicksand font-normal text-principal-500 text-[16px]"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores suscipit accusantium ab deserunt ipsa ut ipsam
+                    itaque, hic fuga quod ea laboriosam.
                   </p>
                 </div>
                 <div class="flex flex-row justify-end">
-                  <img src="/src/assets/svgs/github.svg" alt="See Github Repo" class="w-8">
-                  <img src="/src/assets//svgs/application.svg" alt="See Application" class="w-8">
+                  <img
+                    src="/src/assets/svgs/github.svg"
+                    alt="See Github Repo"
+                    class="w-8"
+                  />
+                  <img
+                    src="/src/assets//svgs/application.svg"
+                    alt="See Application"
+                    class="w-8"
+                  />
                 </div>
               </div>
             </div>
