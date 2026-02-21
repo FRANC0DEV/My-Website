@@ -43,12 +43,12 @@ export function initLanguageSwitcher() {
       if (currentLang === "es") {
         // SPANISH: Get Spanish text from data-lang-es
         const spanishText = element.getAttribute("data-lang-es") as string;
-
+        const englishText = (element.textContent ?? "").trim()
         // Save original English text (first time only)
         if (!element.hasAttribute("data-lang-original")) {
           element.setAttribute(
             "data-lang-original",
-            element.textContent.trim(),
+            englishText
           );
         }
 
