@@ -23,6 +23,11 @@
       content="Frontend and Full Stack Developer portfolio"
     />
     <!--fonts-->
+    <!-- Google Fonts - Plugin will download and optimize these -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Open+Sans:wght@400&family=Julius+Sans+One:wght@400&display=swap" 
+      rel="stylesheet"
+    />
     <!-- Preload Norse font FIRST -->
     <link
       rel="preload"
@@ -31,6 +36,8 @@
       type="font/otf"
       crossorigin
     />
+    <!-- Preload grass image -->
+    <link rel="preload" href="/src/assets/svgs/grass-light.svg" as="image" type="image/svg+xml" fetchpriority="high" />
     <!-- Light theme favicon (icon that will appear on Bookmarks) -->
     <link
       rel="icon"
@@ -198,7 +205,7 @@
           <div
             class="w-full h-12 animate-grass-appear"
             style="
-              background-image: url(&quot;./src/assets/svgs/grass-light.svg&quot;);
+              background-image: url('/src/assets/svgs/grass-light.svg');
               background-repeat: repeat-x;
             "
             aria-hidden="true"

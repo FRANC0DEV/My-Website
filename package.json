@@ -17,12 +17,10 @@
     "prettier": "^3.5.3",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.32.1",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-plugin-webfont-dl": "^3.12.0"
   },
   "dependencies": {
-    "@fontsource/julius-sans-one": "^5.2.7",
-    "@fontsource/open-sans": "^5.2.7",
-    "@fontsource/quicksand": "^5.2.10",
     "@tailwindcss/vite": "^4.1.18",
     "tailwindcss": "^4.1.18"
   }
