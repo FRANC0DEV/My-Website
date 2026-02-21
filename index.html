@@ -24,8 +24,8 @@
     />
     <!--fonts-->
     <!-- Google Fonts - Plugin will download and optimize these -->
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Open+Sans:wght@400&family=Julius+Sans+One:wght@400&display=swap" 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Open+Sans:wght@400&family=Julius+Sans+One:wght@400&display=swap"
       rel="stylesheet"
     />
     <!-- Preload Norse font FIRST -->
@@ -37,7 +37,13 @@
       crossorigin
     />
     <!-- Preload grass image -->
-    <link rel="preload" href="/src/assets/svgs/grass-light.svg" as="image" type="image/svg+xml" fetchpriority="high" />
+    <link
+      rel="preload"
+      href="/src/assets/svgs/grass-light.svg"
+      as="image"
+      type="image/svg+xml"
+      fetchpriority="high"
+    />
     <!-- Light theme favicon (icon that will appear on Bookmarks) -->
     <link
       rel="icon"
@@ -100,13 +106,23 @@
         >
           <!--Language button-->
           <div class="relative flex justify-center">
-            <button id="languageButton" class="cursor-pointer">
+            <button
+              id="languageButton"
+              class="cursor-pointer"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="languageDropdown"
+              aria-label="Select language"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="lucide lucide-languages-icon lucide-languages w-6 aspect-square fill-none stroke-[1.5] stroke-current"
+                aria-hidden="true"
+                focusable="false"
               >
                 <path d="m5 8 6 6" />
                 <path d="m4 14 6-6 2-3" />
@@ -116,28 +132,42 @@
                 <path d="M14 18h6" />
               </svg>
             </button>
+
             <ul
               id="languageDropdown"
+              role="menu"
+              aria-labelledby="languageButton"
               class="absolute top-[150%] right-0 aspect-[6] rounded-md translate bg-principal-50 backdrop-blur-2xl shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)] px-3 py-4 font-openSans flex flex-col gap-y-2"
             >
-              <p
-                data-lang-es="Idiomas"
-                class="text-[12px] font-medium text-principal-500 px-2"
-              >
-                Languages
-              </p>
+              <li>
+                <p
+                  data-lang-es="Idiomas"
+                  class="text-[12px] font-medium text-principal-500 px-2"
+                  id="languageMenuLabel"
+                >
+                  Languages
+                </p>
+              </li>
+
               <li
                 id="lang-es"
+                role="menuitem"
+                tabindex="0"
                 class="flex items-center gap-2 hover:bg-principal-200/40 px-2 py-1 rounded-md cursor-pointer text-[16px] font-medium text-principal-700 transition-colors hover:text-principal-800"
+                aria-label="Switch to Spanish"
               >
-                <img src="/src/assets/svgs/spanish.svg" alt="" class="" />
+                <img src="/src/assets/svgs/spanish.svg" alt="Spanish flag" />
                 <p data-lang-es="Español">Spanish</p>
               </li>
+
               <li
                 id="lang-en"
+                role="menuitem"
+                tabindex="0"
                 class="flex items-center gap-2 hover:bg-principal-200/40 px-2 py-1 rounded-md cursor-pointer text-[16px] font-medium text-principal-700 transition-colors hover:text-principal-800"
+                aria-label="Switch to English"
               >
-                <img src="/src/assets/svgs/english.svg" alt="" srcset="" />
+                <img src="/src/assets/svgs/english.svg" alt="English flag" />
                 <p data-lang-es="Inglés">English</p>
               </li>
             </ul>
@@ -205,7 +235,7 @@
           <div
             class="w-full h-12 animate-grass-appear"
             style="
-              background-image: url('/src/assets/svgs/grass-light.svg');
+              background-image: url(&quot;/src/assets/svgs/grass-light.svg&quot;);
               background-repeat: repeat-x;
             "
             aria-hidden="true"
@@ -2161,7 +2191,11 @@
           <ul class="flex flex-row gap-x-2">
             <!--Email-->
             <li>
-              <a href="mailto:leivachavezedgarfranco@gmail.com" aria-label="Send email to Edgar Franco" title="Send email to Edgar Franco">
+              <a
+                href="mailto:leivachavezedgarfranco@gmail.com"
+                aria-label="Send email to Edgar Franco"
+                title="Send email to Edgar Franco"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
@@ -2198,7 +2232,11 @@
             </li>
             <!--Github-->
             <li>
-              <a href="https://github.com/FRANC0DEV" target="_blank" aria-label="Visit Edgar Franco's GitHub profile">
+              <a
+                href="https://github.com/FRANC0DEV"
+                target="_blank"
+                aria-label="Visit Edgar Franco's GitHub profile"
+              >
                 <svg
                   role="img"
                   viewBox="0 0 24 24"

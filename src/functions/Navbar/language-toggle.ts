@@ -26,11 +26,13 @@ export function initLanguageSwitcher() {
       dropdown.classList.add("active"); // Add 'active' = triggers show animation
       isOpen = true;
     }
+    button.setAttribute("aria-expanded", `${isOpen}`);
   }
 
   // Close dropdown
   function closeDropdown() {
     dropdown.classList.remove("active");
+    button.setAttribute("aria-expanded", "false");
     isOpen = false;
   }
 
@@ -43,13 +45,10 @@ export function initLanguageSwitcher() {
       if (currentLang === "es") {
         // SPANISH: Get Spanish text from data-lang-es
         const spanishText = element.getAttribute("data-lang-es") as string;
-        const englishText = (element.textContent ?? "").trim()
+        const englishText = (element.textContent ?? "").trim();
         // Save original English text (first time only)
         if (!element.hasAttribute("data-lang-original")) {
-          element.setAttribute(
-            "data-lang-original",
-            englishText
-          );
+          element.setAttribute("data-lang-original", englishText);
         }
 
         element.textContent = spanishText; // Show Spanish
