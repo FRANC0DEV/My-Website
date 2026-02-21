@@ -11,7 +11,7 @@ interface WindAnimation {
   scale: number;
   strokeWidth: number;
   strokeColor: string;
-  strokeColorDark?: string; // Optional dark theme color
+  strokeColorDark?: string;
 }
 
 interface Point {
@@ -24,7 +24,6 @@ interface WindData extends WindAnimation {
 }
 
 const canvas = getElement("wind-canvas", HTMLCanvasElement);
-
 const ctx = canvas.getContext("2d");
 
 if (ctx === null) {
@@ -41,8 +40,8 @@ const winds: WindAnimation[] = [
     loopInterval: 10,
     scale: 0.5,
     strokeWidth: 3,
-    strokeColor: "#c5c5c5", // Light theme
-    strokeColorDark: "#323232", // Dark theme
+    strokeColor: "#c5c5c5",
+    strokeColorDark: "#323232",
   },
   {
     x: 150,
@@ -136,7 +135,7 @@ const winds: WindAnimation[] = [
 
 // Function to create path points with scaling and positioning
 function getPathPoints(x: number, y: number, scale: number): Point[] {
-  const points = [];
+  const points: Point[] = [];
 
   // Base control points (relative to origin)
   const baseControlPoints = [
@@ -187,12 +186,13 @@ function getPathPoints(x: number, y: number, scale: number): Point[] {
 }
 
 // Pre-calculate path points for each wind
-const windData = winds.map((wind) => ({
+const windData: WindData[] = winds.map((wind) => ({
   ...wind,
   pathPoints: getPathPoints(wind.x, wind.y, wind.scale),
 }));
 
 let globalStartTime = Date.now();
+let animationFrameId: number | null = null;
 
 function getBackgroundColor(theme: BrowserTheme): string {
   return theme === "dark" ? "#1a1a1a" : "#FFFFFF";
@@ -230,7 +230,7 @@ function drawWind(windInfo: WindData, progress: number, theme: BrowserTheme) {
     const drawProgress = animProgress * 2;
     const particleIndex = Math.floor(drawProgress * (pathPoints.length - 1));
 
-    // Front layer with custom color (no background layers since you eliminated them)
+    // Front layer with custom color
     ctx!.strokeStyle = strokeColor;
     ctx!.lineWidth = lineWidth;
     ctx!.lineCap = "round";
@@ -273,8 +273,16 @@ function drawWind(windInfo: WindData, progress: number, theme: BrowserTheme) {
   }
 }
 
-export default function StartWindAnimation() {
-  if (canvas.style.display === "hidden") {
+function animate() {
+  // IMPROVED: Check if canvas is actually visible
+  // This stops the animation if user navigates away or canvas becomes hidden
+  if (canvas.offsetParent === null) {
+    // Canvas is hidden (display: none or parent hidden)
+    // Stop animation to save resources
+    if (animationFrameId !== null) {
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = null;
+    }
     return;
   }
 
@@ -296,5 +304,26 @@ export default function StartWindAnimation() {
     }
   });
 
-  requestAnimationFrame(StartWindAnimation);
+  animationFrameId = requestAnimationFrame(animate);
+}
+
+export default function StartWindAnimation() {
+  // IMPROVED: Better visibility check
+  // Check if canvas is visible before starting animation
+  if (canvas.offsetParent === null) {
+    console.log('Wind animation skipped: canvas is not visible');
+    return;
+  }
+
+  // Start the animation
+  globalStartTime = Date.now();
+  animate();
+}
+
+// BONUS: Export a stop function in case you need to manually stop the animation
+export function stopWindAnimation() {
+  if (animationFrameId !== null) {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
+  }
 }
