@@ -1891,8 +1891,8 @@
         </div> -->
       </section>
       <!--Contact Me-->
-      <section class="px-[5%] py-10 flex gap-5">
-        <form action="" class="space-y-4 flex-none">
+      <section class="px-[5%] py-10 flex gap-5 items-center">
+        <form id="contact-form" class="space-y-4 flex-none w-1/2">
           <div class="space-y-2">
             <h2 class="font-juliusSansOne text-5xl text-principal-700">
               Let's be in contact!
@@ -1904,67 +1904,61 @@
           </div>
           <ul class="space-y-4">
             <!--Name-->
-            <li class="flex flex-col">
+            <li class="flex flex-col relative">
               <label
                 for="form-contact-name"
-                class="font-quicksand font-semibold text-[14px] text-principal-600"
+                id="form-contact-name-label"
+                class="font-quicksand font-semibold text-[14px] text-principal-600 [&.error]:text-red-600 peer/label"
                 >Name (*)</label
               >
-              <div class="relative">
-                <input
-                  type="text"
-                  name="form-contact-name"
-                  id="form-contact-name"
-                  class="w-full border-b-2 border-principal-400 outline-none peer bg-transparent transition-colors min-h-10 font-quicksand text-[18px] text-principal-800"
-                  placeholder="Enter your full name"
-                />
-                <span
-                  class="absolute bottom-0 left-1/2 h-0.5 w-0 bg-principal-800 transition-all duration-400 ease-out -translate-x-1/2 peer-focus:w-full"
-                ></span>
-              </div>
+              <input
+                type="text"
+                name="form-contact-name"
+                id="form-contact-name"
+                class="w-full border-b-2 border-principal-400 outline-none bg-transparent transition-colors min-h-10 font-quicksand text-[18px] text-principal-800 peer/input peer-[.error]/label:border-red-300"
+                placeholder="Enter your full name"
+              />
+              <span
+                class="absolute bottom-0 left-1/2 h-0.5 w-0 bg-principal-800 transition-all duration-400 ease-out -translate-x-1/2 peer-focus/input:w-full peer-[.error]/label:bg-red-500"
+              ></span>
             </li>
             <!--Email-->
-            <li class="flex flex-col">
-              <label for="form-contact-email" class="font-quicksand font-semibold text-[14px] text-principal-600">Email (*)</label>
-              <div class="relative">
-                <input
-                  type="email"
-                  name="form-contact-email"
-                  id="form-contact-email"
-                  class="w-full border-b-2 border-principal-400 outline-none peer bg-transparent transition-colors min-h-10 font-quicksand text-[18px] text-principal-800"
-                  placeholder="Enter a valid email address"
-                />
-                <span
-                  class="absolute bottom-0 left-1/2 h-0.5 w-0 bg-principal-800 transition-all duration-400 ease-out -translate-x-1/2 peer-focus:w-full"
-                ></span>
-              </div>
+            <li class="flex flex-col relative">
+              <label id="form-contact-email-label" for="form-contact-email" class="font-quicksand font-semibold text-[14px] text-principal-600 [&.error]:text-red-600 peer/label">Email (*)</label>
+              <input
+                type="email"
+                name="form-contact-email"
+                id="form-contact-email"
+                class="w-full border-b-2 border-principal-400 outline-none bg-transparent transition-colors min-h-10 font-quicksand text-[18px] text-principal-800 peer/input peer-[.error]/label:border-red-300"
+                placeholder="Enter a valid email address"
+              />
+              <span
+                class="absolute bottom-0 left-1/2 h-0.5 w-0 bg-principal-800 transition-all duration-400 ease-out -translate-x-1/2 peer-focus/input:w-full peer-[.error]/label:bg-red-500"
+              ></span>
             </li>
             <!--Message-->
-            <li class="flex flex-col">
-              <label for="form-contact-message" class="font-quicksand font-semibold text-[14px] text-principal-600">Message (*)</label>
-              <div class="relative">
-                <textarea
-                  name="form-contact-message"
-                  id="form-contact-message"
-                  class="w-full outline-none peer bg-transparent font-quicksand text-[16px] text-principal-800 resize-y pb-10"
-                  rows="7"
-                  placeholder="Enter your message"
-                  maxlength="600"
-                ></textarea>
-                <span
-                  class="absolute bottom-0 left-0 h-0.5 bg-principal-400 w-full"
-                ></span>
-                <span
-                  class="z-10 absolute bottom-0 left-1/2 h-0.5 w-0 bg-principal-800 transition-all duration-400 ease-out -translate-x-1/2 peer-focus:w-full"
-                ></span>
-              </div>
+            <li class="flex flex-col relative">
+              <label id="form-contact-message-label" for="form-contact-message" class="font-quicksand font-semibold text-[14px] text-principal-600 [&.error]:text-red-600 peer/label">Message (*)</label>
+              <textarea
+                name="form-contact-message"
+                id="form-contact-message"
+                class="w-full outline-none bg-transparent font-quicksand text-[16px] text-principal-800 resize-y pb-10 peer/input"
+                rows="7"
+                placeholder="Enter your message"
+                maxlength="600"
+              ></textarea>
+              <span
+                class="absolute bottom-0 left-0 h-0.5 bg-principal-400 w-full peer-[.error]/label:bg-red-300"
+              ></span>
+              <span
+                class="z-10 absolute bottom-0 left-1/2 h-0.5 w-0 bg-principal-800 transition-all duration-400 ease-out -translate-x-1/2 peer-focus/input:w-full peer-[.error]/label:bg-red-500"
+              ></span>
             </li>
           </ul>
           <button type="submit" class="rounded-sm bg-principal-800 text-principal-50 font-quicksand font-semibold text-[14px] p-4 w-full cursor-pointer hover:bg-principal-700 outline-none focus:bg-principal-700">Submit</button>
         </form>
-        <div class="flex-1 bg-principal-400">
-
-        </div>
+        <canvas class="flex-[0_1_auto] w-1/2 aspect-square" id="dotlottie-canvas">
+        </canvas>
       </section>
     </main>
     <footer class="bg-principal-950 text-principal-200 px-[5%] py-10">

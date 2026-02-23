@@ -22,6 +22,7 @@
     "vite-plugin-webfont-dl": "^3.12.0"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-web": "^0.64.2",
     "@tailwindcss/vite": "^4.1.18",
     "tailwindcss": "^4.1.18"
   }

@@ -4,12 +4,12 @@ import '../../index.css';
 import { setupNavbar } from "./navbar";
 import { setupHeroSection } from "./hero";
 import { setupSkillsAndTechSection } from "./skills-and-technologies";
-
+import { setupContactMeSection } from './contact-me';
 // Setup critical features immediately
 setupNavbar();
 setupHeroSection();
 setupSkillsAndTechSection();
-
+setupContactMeSection();
 // Lazy load wind animation after page is interactive
 // This reduces initial JavaScript execution by ~53%
 function loadWindAnimation() {
