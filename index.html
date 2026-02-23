@@ -1513,7 +1513,7 @@
             <div class="relative pl-10">
               <!--bar-->
               <div
-                class="absolute top-0 bottom-0 left-[0.45rem] border-2 border-principal-500"
+                class="absolute top-0 bottom-0 left-[0.45rem] border border-principal-500"
               ></div>
               <!--point-->
               <div
@@ -1639,7 +1639,7 @@
             <div class="relative pl-10">
               <!--bar-->
               <div
-                class="absolute top-0 bottom-0 left-[0.45rem] border-2 border-principal-500"
+                class="absolute top-0 bottom-0 left-[0.45rem] border border-principal-500"
               ></div>
               <!--point-->
               <div
@@ -1695,7 +1695,8 @@
                     <span class="text-principal-600 shrink-0 text-[16px]"
                       >•</span
                     >
-                    Translated Figma design specifications into pixel-perfect, responsive React components using Tailwind CSS
+                    Translated Figma design specifications into pixel-perfect,
+                    responsive React components using Tailwind CSS
                   </li>
                   <li
                     class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
@@ -1703,7 +1704,8 @@
                     <span class="text-principal-600 shrink-0 text-[16px]"
                       >•</span
                     >
-                    Implemented robust form handling with client-side validation using React Hook Form and Zod schema validation
+                    Implemented robust form handling with client-side validation
+                    using React Hook Form and Zod schema validation
                   </li>
                   <li
                     class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
@@ -1711,7 +1713,8 @@
                     <span class="text-principal-600 shrink-0 text-[16px]"
                       >•</span
                     >
-                    Architected application routing and navigation flow with React Router for seamless user experience
+                    Architected application routing and navigation flow with
+                    React Router for seamless user experience
                   </li>
                   <li
                     class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
@@ -1719,7 +1722,8 @@
                     <span class="text-principal-600 shrink-0 text-[16px]"
                       >•</span
                     >
-                    Collaborated with cross-functional teams using Git workflows and version control best practices
+                    Collaborated with cross-functional teams using Git workflows
+                    and version control best practices
                   </li>
                 </ul>
                 <div class="mt-4 flex flex-wrap gap-2">
@@ -1749,10 +1753,10 @@
         </div>
         <!--Separator-->
         <div
-          class="w-full xl:w-0 border-principal-400 border-[0.1px] my-10 xl:mx-10"
+          class="w-full xl:w-0 border-principal-400 border my-10 xl:mx-10"
         ></div>
         <!--Projects-->
-        <div class="container self-center xl:flex-[5_0_none]">
+        <!-- <div class="container self-center xl:flex-[5_0_none]">
           <div class="space-y-1">
             <h2
               class="font-juliusSansOne text-4xl text-center lg:text-left lg:text-5xl text-principal-500"
@@ -1884,6 +1888,82 @@
               </div>
             </div>
           </div>
+        </div> -->
+      </section>
+      <!--Contact Me-->
+      <section class="px-[5%] py-10 flex gap-5">
+        <form action="" class="space-y-4 flex-none">
+          <div class="space-y-2">
+            <h2 class="font-juliusSansOne text-5xl text-principal-700">
+              Let's be in contact!
+            </h2>
+            <p class="font-quicksand text-lg text-principal-700">
+              Fill out the required fields (*) so I can contact you as soon as
+              I'm available.
+            </p>
+          </div>
+          <ul class="space-y-4">
+            <!--Name-->
+            <li class="flex flex-col">
+              <label
+                for="form-contact-name"
+                class="font-quicksand font-semibold text-[14px] text-principal-600"
+                >Name (*)</label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  name="form-contact-name"
+                  id="form-contact-name"
+                  class="w-full border-b-2 border-principal-400 outline-none peer bg-transparent transition-colors min-h-10 font-quicksand text-[18px] text-principal-800"
+                  placeholder="Enter your full name"
+                />
+                <span
+                  class="absolute bottom-0 left-1/2 h-0.5 w-0 bg-principal-800 transition-all duration-400 ease-out -translate-x-1/2 peer-focus:w-full"
+                ></span>
+              </div>
+            </li>
+            <!--Email-->
+            <li class="flex flex-col">
+              <label for="form-contact-email" class="font-quicksand font-semibold text-[14px] text-principal-600">Email (*)</label>
+              <div class="relative">
+                <input
+                  type="email"
+                  name="form-contact-email"
+                  id="form-contact-email"
+                  class="w-full border-b-2 border-principal-400 outline-none peer bg-transparent transition-colors min-h-10 font-quicksand text-[18px] text-principal-800"
+                  placeholder="Enter a valid email address"
+                />
+                <span
+                  class="absolute bottom-0 left-1/2 h-0.5 w-0 bg-principal-800 transition-all duration-400 ease-out -translate-x-1/2 peer-focus:w-full"
+                ></span>
+              </div>
+            </li>
+            <!--Message-->
+            <li class="flex flex-col">
+              <label for="form-contact-message" class="font-quicksand font-semibold text-[14px] text-principal-600">Message (*)</label>
+              <div class="relative">
+                <textarea
+                  name="form-contact-message"
+                  id="form-contact-message"
+                  class="w-full outline-none peer bg-transparent font-quicksand text-[16px] text-principal-800 resize-y pb-10"
+                  rows="7"
+                  placeholder="Enter your message"
+                  maxlength="600"
+                ></textarea>
+                <span
+                  class="absolute bottom-0 left-0 h-0.5 bg-principal-400 w-full"
+                ></span>
+                <span
+                  class="z-10 absolute bottom-0 left-1/2 h-0.5 w-0 bg-principal-800 transition-all duration-400 ease-out -translate-x-1/2 peer-focus:w-full"
+                ></span>
+              </div>
+            </li>
+          </ul>
+          <button type="submit" class="rounded-sm bg-principal-800 text-principal-50 font-quicksand font-semibold text-[14px] p-4 w-full cursor-pointer hover:bg-principal-700 outline-none focus:bg-principal-700">Submit</button>
+        </form>
+        <div class="flex-1 bg-principal-400">
+
         </div>
       </section>
     </main>
