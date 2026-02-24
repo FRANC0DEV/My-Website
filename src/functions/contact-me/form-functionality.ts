@@ -141,7 +141,6 @@ function showToast(message: string, type: "error" | "success" | "network" = "err
     const toast = document.createElement("div");
     
     let borderColor = "border-red-500";
-    let iconColor = "text-red-500";
     let titleColor = "text-red-800";
     let messageColor = "text-red-600";
     let title = "Validation Error";
@@ -151,7 +150,6 @@ function showToast(message: string, type: "error" | "success" | "network" = "err
     
     if (type === "success") {
         borderColor = "border-green-500";
-        iconColor = "text-green-500";
         titleColor = "text-green-800";
         messageColor = "text-green-600";
         title = "Success";
@@ -160,7 +158,6 @@ function showToast(message: string, type: "error" | "success" | "network" = "err
         </svg>`;
     } else if (type === "network") {
         borderColor = "border-orange-500";
-        iconColor = "text-orange-500";
         titleColor = "text-orange-800";
         messageColor = "text-orange-600";
         title = "Connection Error";

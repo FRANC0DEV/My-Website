@@ -10,9 +10,9 @@ export default function startFormAnimation() {
     autoplay: true,
     loop: true,
     canvas: formAnimationCanvas,
-    src: "/src/assets/lottie/Contact.lottie",
+    src: "https://lottie.host/d16af884-1198-479c-9018-08b1d6661f15/SsDAj33ssj.lottie",
     renderConfig: {
-      autoResize: false,
+      autoResize: true,
     },
   });
 }
