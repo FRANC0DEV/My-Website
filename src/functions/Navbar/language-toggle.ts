@@ -40,7 +40,6 @@ export function initLanguageSwitcher() {
   // Find every element with data-lang-es and swap its text
   function applyLanguage() {
     const elementsToTranslate = document.querySelectorAll("[data-lang-es]");
-
     elementsToTranslate.forEach((element) => {
       if (currentLang === "es") {
         // SPANISH: Get Spanish text from data-lang-es
@@ -61,7 +60,34 @@ export function initLanguageSwitcher() {
       }
     });
 
+    // 🔥 NUEVO: traducir placeholders
+    translateAttribute("placeholder")
+    
     document.documentElement.lang = currentLang; // Update <html lang="en/es">
+  }
+
+
+  function translateAttribute(attr: string) {
+    const elements = document.querySelectorAll(`[data-lang-es-${attr}]`);
+    elements.forEach((element) => {
+      const esValue = element.getAttribute(`data-lang-es-${attr}`) as string;
+      const originalAttr = `data-lang-original-${attr}`;
+
+      if (currentLang === "es") {
+        const original = element.getAttribute(attr);
+
+        if (!element.hasAttribute(originalAttr)) {
+          element.setAttribute(originalAttr, original ?? "");
+        }
+
+        element.setAttribute(attr, esValue);
+      } else {
+        const original = element.getAttribute(originalAttr);
+        if (original !== null) {
+          element.setAttribute(attr, original);
+        }
+      }
+    });
   }
 
   // 4️⃣ CHANGE LANGUAGE AND UPDATE URL
