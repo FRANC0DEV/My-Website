@@ -1753,7 +1753,7 @@
         </div>
         <!--Separator-->
         <div
-          class="w-full xl:w-0 border-principal-400 border my-10 xl:mx-10"
+          class="hidden w-full xl:w-0 border-principal-400 border my-10 xl:mx-10"
         ></div>
         <!--Projects-->
         <!-- <div class="container self-center xl:flex-[5_0_none]">
@@ -1892,7 +1892,7 @@
       </section>
       <!--Contact Me-->
       <section class="px-[5%] py-10 flex gap-5 items-center">
-        <form id="contact-form" class="space-y-4 flex-none w-1/2">
+        <form id="contact-form" class="space-y-4 flex-none w-1/2" novalidate>
           <div class="space-y-2">
             <h2 class="font-juliusSansOne text-5xl text-principal-700">
               Let's be in contact!
@@ -1915,6 +1915,9 @@
                 type="text"
                 name="form-contact-name"
                 id="form-contact-name"
+                aria-required="true"
+                aria-invalid="false"
+                aria-labelledby="form-contact-name-label"
                 class="w-full border-b-2 border-principal-400 outline-none bg-transparent transition-colors min-h-10 font-quicksand text-[18px] text-principal-800 peer/input peer-[.error]/label:border-red-300"
                 placeholder="Enter your full name"
               />
@@ -1924,11 +1927,19 @@
             </li>
             <!--Email-->
             <li class="flex flex-col relative">
-              <label id="form-contact-email-label" for="form-contact-email" class="font-quicksand font-semibold text-[14px] text-principal-600 [&.error]:text-red-600 peer/label">Email (*)</label>
+              <label
+                id="form-contact-email-label"
+                for="form-contact-email"
+                class="font-quicksand font-semibold text-[14px] text-principal-600 [&.error]:text-red-600 peer/label"
+                >Email (*)</label
+              >
               <input
                 type="email"
                 name="form-contact-email"
                 id="form-contact-email"
+                aria-required="true"
+                aria-invalid="false"
+                aria-labelledby="form-contact-email-label"
                 class="w-full border-b-2 border-principal-400 outline-none bg-transparent transition-colors min-h-10 font-quicksand text-[18px] text-principal-800 peer/input peer-[.error]/label:border-red-300"
                 placeholder="Enter a valid email address"
               />
@@ -1938,14 +1949,22 @@
             </li>
             <!--Message-->
             <li class="flex flex-col relative">
-              <label id="form-contact-message-label" for="form-contact-message" class="font-quicksand font-semibold text-[14px] text-principal-600 [&.error]:text-red-600 peer/label">Message (*)</label>
+              <label
+                id="form-contact-message-label"
+                for="form-contact-message"
+                class="font-quicksand font-semibold text-[14px] text-principal-600 [&.error]:text-red-600 peer/label"
+                >Message (*)</label
+              >
               <textarea
                 name="form-contact-message"
                 id="form-contact-message"
+                aria-required="true"
+                aria-invalid="false"
+                aria-labelledby="form-contact-message-label"
+                maxlength="600"
                 class="w-full outline-none bg-transparent font-quicksand text-[16px] text-principal-800 resize-y pb-10 peer/input"
                 rows="7"
                 placeholder="Enter your message"
-                maxlength="600"
               ></textarea>
               <span
                 class="absolute bottom-0 left-0 h-0.5 bg-principal-400 w-full peer-[.error]/label:bg-red-300"
@@ -1955,9 +1974,18 @@
               ></span>
             </li>
           </ul>
-          <button type="submit" class="rounded-sm bg-principal-800 text-principal-50 font-quicksand font-semibold text-[14px] p-4 w-full cursor-pointer hover:bg-principal-700 outline-none focus:bg-principal-700">Submit</button>
+          <button
+            type="submit"
+            class="rounded-sm bg-principal-800 text-principal-50 font-quicksand font-semibold text-[14px] p-4 w-full cursor-pointer hover:bg-principal-700 outline-none focus:bg-principal-700 focus:ring-2 focus:ring-principal-500 focus:ring-offset-2 disabled:bg-principal-600 disabled:text-principal-100 disabled:cursor-progress"
+            id="contact-form-submit-button"
+          >
+            Submit
+          </button>
         </form>
-        <canvas class="flex-[0_1_auto] w-1/2 aspect-square" id="dotlottie-canvas">
+        <canvas
+          class="flex-[0_1_auto] w-1/2 aspect-square"
+          id="dotlottie-canvas"
+        >
         </canvas>
       </section>
     </main>
