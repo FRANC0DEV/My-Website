@@ -94,21 +94,27 @@ export function initLanguageSwitcher() {
   function setLanguage(lang: Language) {
     currentLang = lang;
 
-    // Update URL: /about → /es/about or /en/about
+    const base = import.meta.env.BASE_URL.replace(/\/$/, ""); 
     const currentPath = window.location.pathname;
-    let newPath;
 
-    if (currentPath.includes("/es") || currentPath.includes("/en")) {
-      // Already has language: /es/about → /en/about
-      newPath = currentPath.replace(/\/(es|en)/, `/${lang}`);
+    // Remove base from path so we can manipulate cleanly
+    let pathWithoutBase = currentPath.replace(base, "") || "/";
+
+    let newPath: string;
+
+    if (pathWithoutBase.startsWith("/es") || pathWithoutBase.startsWith("/en")) {
+      // /es/about → /en/about
+      newPath = pathWithoutBase.replace(/^\/(es|en)/, `/${lang}`);
     } else {
-      // No language yet: /about → /es/about
-      newPath = `/${lang}${currentPath}`;
+      // /about → /es/about
+      newPath = `/${lang}${pathWithoutBase}`;
     }
 
-    window.history.pushState({}, "", newPath); // Change URL without reload
-    applyLanguage(); // Update all text
-    closeDropdown(); // Close the menu
+    const finalPath = `${base}${newPath}`;
+
+    window.history.pushState({}, "", finalPath);
+    applyLanguage();
+    closeDropdown();
   }
 
   // 5️⃣ EVENT LISTENERS
