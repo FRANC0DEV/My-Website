@@ -1,13 +1,12 @@
-# 🌐 My Website
+# 🚀 Landing Page
 
-**Personal Portfolio & Web Showcase**
+**Modern Landing Page built with Vite + TypeScript + Tailwind CSS**
 
-*Modern, responsive, and elegant portfolio to present projects and skills online*
+*Fast, lightweight, and performance-oriented frontend landing page*
 
-[![HTML](https://img.shields.io/badge/HTML-5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
-[![CSS](https://img.shields.io/badge/CSS-3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-181717?style=flat&logo=github)](https://pages.github.com)
+[![Vite](https://img.shields.io/badge/Vite-5+-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind](https://img.shields.io/badge/TailwindCSS-3+-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
 [English](#english) | [Español](#español)
 
@@ -15,29 +14,46 @@
 
 ## English
 
-### 🎯 What is My Website?
+### 🎯 What is this project?
 
-**My Website** is a personal portfolio designed to showcase projects, skills, and professional background. Built with modern web technologies, it provides a clean and responsive interface for visitors to explore your work.
+This project is a **modern, high-performance landing page** built using **Vite + TypeScript + Tailwind CSS**.  
+It focuses on:
 
-**Current Support:** Desktop & Mobile responsive design
+- ⚡ Fast loading times  
+- 🎨 Clean UI with animations (Lottie)  
+- 📱 Responsive design  
+- 🧪 Good Lighthouse performance scores  
 
-### 🌟 Key Features
+Even though the project already achieves good performance metrics, there are some technical debts and architectural limitations to be addressed.
 
-- 📱 **Responsive Design**: Works seamlessly across devices
-- 🎨 **Modern UI**: Clean and elegant layout
-- 🖼️ **Project Showcase**: Highlight personal and professional projects
-- 🧑‍💻 **About Me Section**: Share background, skills, and experience
-- 📬 **Contact Form**: Easy way for visitors to reach out
-- 🚀 **Fast Deployment**: Hosted on GitHub Pages
+---
 
-### 🏗️ Architecture
-```
-my-website/
-├── index.html        # Main entry point
-├── css/              # Stylesheets
-│   └── style.css
-├── js/               # JavaScript functionality
-│   └── main.js
-├── assets/           # Images, icons, and media
-└── README.md         # Documentation
-```
+### 🛠️ Tech Stack
+
+- **Vite** – Fast bundler and dev server  
+- **TypeScript** – Static typing  
+- **Tailwind CSS** – Utility-first styling  
+- **EmailJS** – Client-side email handling  
+- **Lottie (dotlottie-web)** – Animations  
+- **ESLint + Prettier** – Code quality  
+- **Rollup Visualizer** – Bundle analysis  
+
+---
+
+### 📁 Project Structure
+
+```txt
+Landing-Page/
+├─ public/              # Public static assets
+├─ src/
+│  ├─ assets/           # SVGs, images, animations
+│  ├─ functions/        # Project-specific logic
+│  ├─ utils/            # Shared utilities
+│  ├─ types/            # TypeScript types
+│  └─ vite-env.d.ts     # Vite typings
+├─ dist/                # Production build output
+├─ index.html           # Main HTML entry point
+├─ index.css            # Global styles
+├─ vite.config.ts       # Vite configuration
+├─ tsconfig.json        # TypeScript configuration
+└─ package.json
