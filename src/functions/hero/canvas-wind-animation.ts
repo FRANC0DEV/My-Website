@@ -1,6 +1,6 @@
 import type { BrowserTheme } from "../../types/theme";
 import getElement from "../../utils/getElement";
-import getTheme from "../../utils/getTheme";
+// import getTheme from "../../utils/getTheme";
 
 interface WindAnimation {
   x: number;
@@ -286,7 +286,8 @@ function animate() {
     return;
   }
 
-  const theme = getTheme();
+  // const theme = getTheme();
+  const theme: BrowserTheme = "light"
   const backgroundColor = getBackgroundColor(theme);
 
   const elapsed = (Date.now() - globalStartTime) / 1000;
