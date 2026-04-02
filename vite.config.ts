@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import webfontDownload from "vite-plugin-webfont-dl";
 import { visualizer } from "rollup-plugin-visualizer";
 export default defineConfig({
-  base: "/My-Website/",
+  base: "/My-Website",
   plugins: [
     tailwindcss(),
     webfontDownload(),

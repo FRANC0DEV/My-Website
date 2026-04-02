@@ -9,11 +9,11 @@ export function initLanguageSwitcher() {
   const button = getElement("languageButton", HTMLButtonElement);
 
   // 1️⃣ CHECK URL ON PAGE LOAD
-  // If URL is /es/something, set Spanish. If /en/something, set English
-  const path = window.location.pathname;
-  if (path.includes("/es")) {
+  // If URL is ?lang=es, set Spanish. If ?lang=en, set English
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("lang") === "es") {
     currentLang = "es";
-  } else if (path.includes("/en")) {
+  } else if (params.get("lang") === "en") {
     currentLang = "en";
   }
 
@@ -36,85 +36,16 @@ export function initLanguageSwitcher() {
     isOpen = false;
   }
 
-  // 3️⃣ APPLY LANGUAGE TO ALL ELEMENTS
-  // Find every element with data-lang-es and swap its text
-  function applyLanguage() {
-    const elementsToTranslate = document.querySelectorAll("[data-lang-es]");
-    elementsToTranslate.forEach((element) => {
-      if (currentLang === "es") {
-        // SPANISH: Get Spanish text from data-lang-es
-        const spanishText = element.getAttribute("data-lang-es") as string;
-        const englishText = (element.textContent ?? "").trim();
-        // Save original English text (first time only)
-        if (!element.hasAttribute("data-lang-original")) {
-          element.setAttribute("data-lang-original", englishText);
-        }
-
-        element.textContent = spanishText; // Show Spanish
-      } else {
-        // ENGLISH: Get back the original English text
-        const originalText = element.getAttribute("data-lang-original");
-        if (originalText) {
-          element.textContent = originalText; // Show English
-        }
-      }
-    });
-
-    // 🔥 NUEVO: traducir placeholders
-    translateAttribute("placeholder")
-    
-    document.documentElement.lang = currentLang; // Update <html lang="en/es">
-  }
-
-
-  function translateAttribute(attr: string) {
-    const elements = document.querySelectorAll(`[data-lang-es-${attr}]`);
-    elements.forEach((element) => {
-      const esValue = element.getAttribute(`data-lang-es-${attr}`) as string;
-      const originalAttr = `data-lang-original-${attr}`;
-
-      if (currentLang === "es") {
-        const original = element.getAttribute(attr);
-
-        if (!element.hasAttribute(originalAttr)) {
-          element.setAttribute(originalAttr, original ?? "");
-        }
-
-        element.setAttribute(attr, esValue);
-      } else {
-        const original = element.getAttribute(originalAttr);
-        if (original !== null) {
-          element.setAttribute(attr, original);
-        }
-      }
-    });
-  }
-
   // 4️⃣ CHANGE LANGUAGE AND UPDATE URL
   function setLanguage(lang: Language) {
-    currentLang = lang;
-
-    const base = import.meta.env.BASE_URL.replace(/\/$/, ""); 
-    const currentPath = window.location.pathname;
-
-    // Remove base from path so we can manipulate cleanly
-    let pathWithoutBase = currentPath.replace(base, "") || "/";
-
-    let newPath: string;
-
-    if (pathWithoutBase.startsWith("/es") || pathWithoutBase.startsWith("/en")) {
-      // /es/about → /en/about
-      newPath = pathWithoutBase.replace(/^\/(es|en)/, `/${lang}`);
-    } else {
-      // /about → /es/about
-      newPath = `/${lang}${pathWithoutBase}`;
-    }
-
-    const finalPath = `${base}${newPath}`;
-
-    window.history.pushState({}, "", finalPath);
-    applyLanguage();
     closeDropdown();
+    const newSearchParams = new URLSearchParams(params);
+    const url = new URL(window.location.href);
+    newSearchParams.set("lang", lang);
+    const newURL = `${url.origin}${url.pathname}?${newSearchParams.toString()}`;
+    setTimeout(() => {
+      window.location.href = newURL;
+    }, 200);
   }
 
   // 5️⃣ EVENT LISTENERS
@@ -153,5 +84,54 @@ export function initLanguageSwitcher() {
   });
 
   // Apply language on page load
-  applyLanguage();
+  translateTagsText(currentLang);
+  translateAttributes("placeholder", currentLang);
+  document.documentElement.lang = currentLang;
+}
+
+/**AUX FUNCTIONS */
+function translateAttributes(attr: string, currentLang: Language) {
+  const elements = document.querySelectorAll(`[data-lang-es-${attr}]`);
+  elements.forEach((element) => {
+    const esValue = element.getAttribute(`data-lang-es-${attr}`) as string;
+    const originalAttr = `data-lang-original-${attr}`;
+
+    if (currentLang === "es") {
+      const original = element.getAttribute(attr);
+
+      if (!element.hasAttribute(originalAttr)) {
+        element.setAttribute(originalAttr, original ?? "");
+      }
+
+      element.setAttribute(attr, esValue);
+    } else {
+      const original = element.getAttribute(originalAttr);
+      if (original !== null) {
+        element.setAttribute(attr, original);
+      }
+    }
+  });
+}
+
+function translateTagsText(currentLang: Language) {
+  const elementsToTranslate = document.querySelectorAll("[data-lang-es]");
+  elementsToTranslate.forEach((element) => {
+    if (currentLang === "es") {
+      // SPANISH: Get Spanish text from data-lang-es
+      const spanishText = element.getAttribute("data-lang-es") as string;
+      const englishText = (element.textContent ?? "").trim();
+      // Save original English text (first time only)
+      if (!element.hasAttribute("data-lang-original")) {
+        element.setAttribute("data-lang-original", englishText);
+      }
+
+      element.textContent = spanishText; // Show Spanish
+    } else {
+      // ENGLISH: Get back the original English text
+      const originalText = element.getAttribute("data-lang-original");
+      if (originalText) {
+        element.textContent = originalText; // Show English
+      }
+    }
+  });
 }
