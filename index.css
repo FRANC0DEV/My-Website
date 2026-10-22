@@ -35,19 +35,39 @@
   border-color: oklch(37.1% 0 0);
 }
 
+/* Language dropdown: hidden by default, popover animation on .active */
 #languageDropdown {
   visibility: hidden;
   opacity: 0;
+  transform: translateY(-0.25rem) scale(0.95);
+  pointer-events: none;
   transition:
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    visibility 0.3s;
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s;
 }
 
 #languageDropdown.active {
-  display: absolute;
   visibility: visible;
   opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Check icon marks the active language (state driven by aria-checked) */
+#languageDropdown .language-check {
+  visibility: hidden;
+}
+
+#languageDropdown [role="menuitemradio"][aria-checked="true"] .language-check {
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #languageDropdown,
+  #languageDropdown.active {
+    transition: none;
+  }
 }
 
 @media (width >= 46rem) {

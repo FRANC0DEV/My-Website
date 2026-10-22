@@ -6,6 +6,9 @@ import { setupHeroSection } from "./hero";
 import { setupSkillsAndTechSection } from "./skills-and-technologies";
 import { setupContactMeSection } from './contact-me';
 import { setupCertificatesSection } from "./certificates";
+import { initI18n } from "./i18n/i18n";
+// i18n must run first so every section (and its DOM clones) starts translated
+initI18n();
 // Setup critical features immediately
 setupNavbar();
 setupHeroSection();
