@@ -2,9 +2,9 @@
 <section
   id="projects"
   aria-labelledby="projects-heading"
-  class="w-full space-y-4 xl:flex-[5_0_none]"
+  class="w-full min-w-0 space-y-4 xl:flex xl:min-h-0 xl:flex-col xl:flex-[5_0_none]"
 >
-  <div class="space-y-1">
+  <div class="space-y-1 xl:shrink-0">
     <h2
       id="projects-heading"
       class="font-juliusSansOne text-4xl text-center lg:text-left lg:text-5xl text-principal-500"
@@ -19,324 +19,331 @@
       Selected work: freelance and academic projects
     </p>
   </div>
-  <!--Projects grid (scrollable region, keyboard accessible)-->
+  <!--Projects scroll region (keyboard accessible).
+       The scroller and the grid are deliberately separate elements: a grid
+       sized by flex gets a definite height, its `auto` rows are then sized
+       from that definite height and crush the cards (clipped images, no
+       scrolling). An auto-height grid inside the scroller renders at its
+       natural size and overflows instead.-->
   <div
-    id="projects-grid"
+    id="projects-scroll"
     role="region"
     aria-label="Projects grid"
     data-lang-es-aria-label="Cuadrícula de proyectos"
     tabindex="0"
-    class="scroll-region grid max-h-[65dvh] gap-4 opacity-0 overflow-y-auto overflow-x-hidden overscroll-y-contain sm:grid-cols-2"
+    class="scroll-region max-h-[65dvh] overflow-y-auto overflow-x-hidden overscroll-y-contain xl:max-h-none xl:min-h-0 xl:flex-1"
   >
-    <!--Sonantia-->
-    <article
-      class="project-card group relative flex flex-col overflow-hidden rounded-xl bg-principal-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)]"
-    >
-      <div class="relative overflow-hidden">
-        <img
-          src="/src/assets/projects/sonantia.svg"
-          alt="Sonantia music platform interface preview"
-          loading="lazy"
-          decoding="async"
-          class="aspect-16/10 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <span
-          class="absolute left-3 top-3 rounded-full bg-principal-950/75 px-2.5 py-0.5 text-xs font-mono text-principal-50 backdrop-blur-sm"
-          data-lang-es="Backend"
-        >
-          Backend
-        </span>
-      </div>
-      <div class="flex flex-1 flex-col space-y-3 p-4">
-        <div class="flex items-start justify-between gap-2">
-          <h3
-            class="text-lg font-semibold text-principal-500"
-            data-lang-es="Sonantia"
-          >
-            Sonantia
-          </h3>
+    <div id="projects-grid" class="grid gap-4 pb-1 opacity-0 sm:grid-cols-2">
+      <!--Sonantia-->
+      <article
+        class="project-card group relative flex flex-col overflow-hidden rounded-xl bg-principal-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)]"
+      >
+        <div class="relative overflow-hidden">
+          <img
+            src="/src/assets/projects/sonantia.svg"
+            alt="Sonantia music platform interface preview"
+            loading="lazy"
+            decoding="async"
+            class="aspect-16/10 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
           <span
-            class="shrink-0 rounded-full border border-principal-300 px-2.5 py-0.5 text-xs font-mono text-principal-500"
-            data-lang-es="En progreso"
+            class="absolute left-3 top-3 rounded-full bg-principal-950/75 px-2.5 py-0.5 text-xs font-mono text-principal-50 backdrop-blur-sm"
+            data-lang-es="Backend"
           >
-            In progress
+            Backend
           </span>
         </div>
-        <p
-          class="text-sm font-medium text-principal-600 leading-relaxed"
-          data-lang-es="API REST para una plataforma musical: autenticación, catálogo de canciones y playlists, almacenamiento de medios en la nube y documentación con Swagger"
-        >
-          REST API for a music platform: authentication, song and playlist
-          catalog, cloud media storage and Swagger documentation
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Express</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >TypeScript</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >MySQL</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Zod</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Cloudinary</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Swagger</span
+        <div class="flex flex-1 flex-col space-y-3 p-4">
+          <div class="flex items-start justify-between gap-2">
+            <h3
+              class="text-lg font-semibold text-principal-500"
+              data-lang-es="Sonantia"
+            >
+              Sonantia
+            </h3>
+            <span
+              class="shrink-0 rounded-full border border-principal-300 px-2.5 py-0.5 text-xs font-mono text-principal-500"
+              data-lang-es="En progreso"
+            >
+              In progress
+            </span>
+          </div>
+          <p
+            class="text-sm font-medium text-principal-600 leading-relaxed"
+            data-lang-es="API REST para una plataforma musical: autenticación, catálogo de canciones y playlists, almacenamiento de medios en la nube y documentación con Swagger"
           >
+            REST API for a music platform: authentication, song and playlist
+            catalog, cloud media storage and Swagger documentation
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >Express</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >TypeScript</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >MySQL</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >Zod</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >Cloudinary</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >Swagger</span
+            >
+          </div>
+          <div
+            class="mt-auto flex justify-end border-t border-t-principal-200 pt-3"
+          >
+            <a
+              href="https://github.com/FRANC0DEV/Sonantia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-mono text-principal-600 transition-colors hover:bg-principal-200/60 hover:text-principal-800"
+              aria-label="View the Sonantia repository on GitHub"
+              data-lang-es-aria-label="Ver el repositorio de Sonantia en GitHub"
+            >
+              <img
+                src="/src/assets/svgs/github.svg"
+                alt=""
+                aria-hidden="true"
+                class="w-4"
+              />
+              <span data-lang-es="Ver repositorio">View repository</span>
+            </a>
+          </div>
         </div>
-        <div
-          class="mt-auto flex justify-end border-t border-t-principal-200 pt-3"
-        >
-          <a
-            href="https://github.com/FRANC0DEV/Sonantia"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-mono text-principal-600 transition-colors hover:bg-principal-200/60 hover:text-principal-800"
-            aria-label="View the Sonantia repository on GitHub"
-            data-lang-es-aria-label="Ver el repositorio de Sonantia en GitHub"
-          >
-            <img
-              src="/src/assets/svgs/github.svg"
-              alt=""
-              aria-hidden="true"
-              class="w-4"
-            />
-            <span data-lang-es="Ver repositorio">View repository</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <!--ElsaVal-->
-    <article
-      class="project-card group relative flex flex-col overflow-hidden rounded-xl bg-principal-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)]"
-    >
-      <div class="relative overflow-hidden">
-        <img
-          src="/src/assets/projects/elsaval.svg"
-          alt="ElsaVal crochet store interface preview"
-          loading="lazy"
-          decoding="async"
-          class="aspect-16/10 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <span
-          class="absolute left-3 top-3 rounded-full bg-principal-950/75 px-2.5 py-0.5 text-xs font-mono text-principal-50 backdrop-blur-sm"
-          data-lang-es="Frontend"
-        >
-          Frontend
-        </span>
-      </div>
-      <div class="flex flex-1 flex-col space-y-3 p-4">
-        <div class="flex items-start justify-between gap-2">
-          <h3
-            class="text-lg font-semibold text-principal-500"
-            data-lang-es="ElsaVal"
-          >
-            ElsaVal
-          </h3>
+      </article>
+      <!--ElsaVal-->
+      <article
+        class="project-card group relative flex flex-col overflow-hidden rounded-xl bg-principal-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)]"
+      >
+        <div class="relative overflow-hidden">
+          <img
+            src="/src/assets/projects/elsaval.svg"
+            alt="ElsaVal crochet store interface preview"
+            loading="lazy"
+            decoding="async"
+            class="aspect-16/10 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
           <span
-            class="shrink-0 rounded-full border border-principal-300 px-2.5 py-0.5 text-xs font-mono text-principal-500"
-            data-lang-es="En progreso"
+            class="absolute left-3 top-3 rounded-full bg-principal-950/75 px-2.5 py-0.5 text-xs font-mono text-principal-50 backdrop-blur-sm"
+            data-lang-es="Frontend"
           >
-            In progress
+            Frontend
           </span>
         </div>
-        <p
-          class="text-sm font-medium text-principal-600 leading-relaxed"
-          data-lang-es="Ecommerce para una tienda de tejidos a crochet: catálogo de productos, carrito, flujo de compra y comprobantes de pedido en PDF"
-        >
-          E-commerce for a crochet store: product catalog, cart, checkout flow
-          and PDF order invoices
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >React</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >JavaScript</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Bootstrap</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >React Router</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Axios</span
+        <div class="flex flex-1 flex-col space-y-3 p-4">
+          <div class="flex items-start justify-between gap-2">
+            <h3
+              class="text-lg font-semibold text-principal-500"
+              data-lang-es="ElsaVal"
+            >
+              ElsaVal
+            </h3>
+            <span
+              class="shrink-0 rounded-full border border-principal-300 px-2.5 py-0.5 text-xs font-mono text-principal-500"
+              data-lang-es="En progreso"
+            >
+              In progress
+            </span>
+          </div>
+          <p
+            class="text-sm font-medium text-principal-600 leading-relaxed"
+            data-lang-es="Ecommerce para una tienda de tejidos a crochet: catálogo de productos, carrito, flujo de compra y comprobantes de pedido en PDF"
           >
+            E-commerce for a crochet store: product catalog, cart, checkout flow
+            and PDF order invoices
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >React</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >JavaScript</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >Bootstrap</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >React Router</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >Axios</span
+            >
+          </div>
+          <div
+            class="mt-auto flex justify-end border-t border-t-principal-200 pt-3"
+          >
+            <a
+              href="https://github.com/FRANC0DEV/ElsaVal"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-mono text-principal-600 transition-colors hover:bg-principal-200/60 hover:text-principal-800"
+              aria-label="View the ElsaVal repository on GitHub"
+              data-lang-es-aria-label="Ver el repositorio de ElsaVal en GitHub"
+            >
+              <img
+                src="/src/assets/svgs/github.svg"
+                alt=""
+                aria-hidden="true"
+                class="w-4"
+              />
+              <span data-lang-es="Ver repositorio">View repository</span>
+            </a>
+          </div>
         </div>
-        <div
-          class="mt-auto flex justify-end border-t border-t-principal-200 pt-3"
-        >
-          <a
-            href="https://github.com/FRANC0DEV/ElsaVal"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-mono text-principal-600 transition-colors hover:bg-principal-200/60 hover:text-principal-800"
-            aria-label="View the ElsaVal repository on GitHub"
-            data-lang-es-aria-label="Ver el repositorio de ElsaVal en GitHub"
-          >
-            <img
-              src="/src/assets/svgs/github.svg"
-              alt=""
-              aria-hidden="true"
-              class="w-4"
-            />
-            <span data-lang-es="Ver repositorio">View repository</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <!--In-Scaena-->
-    <article
-      class="project-card group relative flex flex-col overflow-hidden rounded-xl bg-principal-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)]"
-    >
-      <div class="relative overflow-hidden">
-        <img
-          src="/src/assets/projects/in-scaena.svg"
-          alt="In-Scaena movie discovery interface preview"
-          loading="lazy"
-          decoding="async"
-          class="aspect-16/10 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <span
-          class="absolute left-3 top-3 rounded-full bg-principal-950/75 px-2.5 py-0.5 text-xs font-mono text-principal-50 backdrop-blur-sm"
-          data-lang-es="Frontend"
-        >
-          Frontend
-        </span>
-      </div>
-      <div class="flex flex-1 flex-col space-y-3 p-4">
-        <div class="flex items-start justify-between gap-2">
-          <h3
-            class="text-lg font-semibold text-principal-500"
-            data-lang-es="In-Scaena"
-          >
-            In-Scaena
-          </h3>
+      </article>
+      <!--In-Scaena-->
+      <article
+        class="project-card group relative flex flex-col overflow-hidden rounded-xl bg-principal-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)]"
+      >
+        <div class="relative overflow-hidden">
+          <img
+            src="/src/assets/projects/in-scaena.svg"
+            alt="In-Scaena movie discovery interface preview"
+            loading="lazy"
+            decoding="async"
+            class="aspect-16/10 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
           <span
-            class="shrink-0 rounded-full border border-principal-300 px-2.5 py-0.5 text-xs font-mono text-principal-500"
-            data-lang-es="En progreso"
+            class="absolute left-3 top-3 rounded-full bg-principal-950/75 px-2.5 py-0.5 text-xs font-mono text-principal-50 backdrop-blur-sm"
+            data-lang-es="Frontend"
           >
-            In progress
+            Frontend
           </span>
         </div>
-        <p
-          class="text-sm font-medium text-principal-600 leading-relaxed"
-          data-lang-es="Aplicación que ayuda a los amantes del cine a escoger qué película o serie ver, con búsqueda, filtros y vistas de detalle"
-        >
-          Web app that helps cinema lovers pick what to watch next, with search,
-          filters and detail views
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Next.js</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >React</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >TypeScript</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Tailwind CSS</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >shadcn/ui</span
+        <div class="flex flex-1 flex-col space-y-3 p-4">
+          <div class="flex items-start justify-between gap-2">
+            <h3
+              class="text-lg font-semibold text-principal-500"
+              data-lang-es="In-Scaena"
+            >
+              In-Scaena
+            </h3>
+            <span
+              class="shrink-0 rounded-full border border-principal-300 px-2.5 py-0.5 text-xs font-mono text-principal-500"
+              data-lang-es="En progreso"
+            >
+              In progress
+            </span>
+          </div>
+          <p
+            class="text-sm font-medium text-principal-600 leading-relaxed"
+            data-lang-es="Aplicación que ayuda a los amantes del cine a escoger qué película o serie ver, con búsqueda, filtros y vistas de detalle"
           >
+            Web app that helps cinema lovers pick what to watch next, with
+            search, filters and detail views
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >Next.js</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >React</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >TypeScript</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >Tailwind CSS</span
+            ><span
+              class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
+              >shadcn/ui</span
+            >
+          </div>
+          <div
+            class="mt-auto flex justify-end border-t border-t-principal-200 pt-3"
+          >
+            <a
+              href="https://github.com/FRANC0DEV/In-Scaena"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-mono text-principal-600 transition-colors hover:bg-principal-200/60 hover:text-principal-800"
+              aria-label="View the In-Scaena repository on GitHub"
+              data-lang-es-aria-label="Ver el repositorio de In-Scaena en GitHub"
+            >
+              <img
+                src="/src/assets/svgs/github.svg"
+                alt=""
+                aria-hidden="true"
+                class="w-4"
+              />
+              <span data-lang-es="Ver repositorio">View repository</span>
+            </a>
+          </div>
         </div>
-        <div
-          class="mt-auto flex justify-end border-t border-t-principal-200 pt-3"
-        >
-          <a
-            href="https://github.com/FRANC0DEV/In-Scaena"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-mono text-principal-600 transition-colors hover:bg-principal-200/60 hover:text-principal-800"
-            aria-label="View the In-Scaena repository on GitHub"
-            data-lang-es-aria-label="Ver el repositorio de In-Scaena en GitHub"
-          >
-            <img
-              src="/src/assets/svgs/github.svg"
-              alt=""
-              aria-hidden="true"
-              class="w-4"
-            />
-            <span data-lang-es="Ver repositorio">View repository</span>
-          </a>
-        </div>
-      </div>
-    </article>
-    <!--TURTLE-->
-    <article
-      class="project-card group relative flex flex-col overflow-hidden rounded-xl bg-principal-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)]"
-    >
-      <div class="relative overflow-hidden">
-        <img
-          src="/src/assets/projects/turtle.svg"
-          alt="TURTLE restaurant operations system interface preview"
-          loading="lazy"
-          decoding="async"
-          class="aspect-16/10 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <span
-          class="absolute left-3 top-3 rounded-full bg-principal-950/75 px-2.5 py-0.5 text-xs font-mono text-principal-50 backdrop-blur-sm"
-          data-lang-es="Frontend"
-        >
-          Frontend
-        </span>
-      </div>
-      <div class="flex flex-1 flex-col space-y-3 p-4">
-        <div class="flex items-start justify-between gap-2">
-          <h3
-            class="text-lg font-semibold text-principal-500"
-            data-lang-es="TURTLE"
-          >
-            TURTLE
-          </h3>
+      </article>
+      <!--TURTLE-->
+      <article
+        class="project-card group relative flex flex-col overflow-hidden rounded-xl bg-principal-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_5px_15px_0_hsla(0,0%,0%,0.15)]"
+      >
+        <div class="relative overflow-hidden">
+          <img
+            src="/src/assets/projects/turtle.svg"
+            alt="TURTLE restaurant operations system interface preview"
+            loading="lazy"
+            decoding="async"
+            class="aspect-16/10 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
           <span
-            class="shrink-0 rounded-full border border-principal-300 px-2.5 py-0.5 text-xs font-mono text-principal-500"
-            data-lang-es="En progreso"
+            class="absolute left-3 top-3 rounded-full bg-principal-950/75 px-2.5 py-0.5 text-xs font-mono text-principal-50 backdrop-blur-sm"
+            data-lang-es="Frontend"
           >
-            In progress
+            Frontend
           </span>
         </div>
-        <p
-          class="text-sm font-medium text-principal-600 leading-relaxed"
-          data-lang-es="Sistema de gestión operativa para restaurantes que cubre el área administrativa de las operaciones diarias"
-        >
-          Operative management system for restaurants covering the admin side of
-          daily operations
-        </p>
-        <!--Tech tags: pending (private repository, stack to be confirmed)-->
-        <div
-          class="mt-auto flex justify-end border-t border-t-principal-200 pt-3"
-        >
-          <a
-            href="https://github.com/TURTLE-URP/TURTLE-Frontend-Adm"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-mono text-principal-600 transition-colors hover:bg-principal-200/60 hover:text-principal-800"
-            aria-label="View the TURTLE repository on GitHub"
-            data-lang-es-aria-label="Ver el repositorio de TURTLE en GitHub"
+        <div class="flex flex-1 flex-col space-y-3 p-4">
+          <div class="flex items-start justify-between gap-2">
+            <h3
+              class="text-lg font-semibold text-principal-500"
+              data-lang-es="TURTLE"
+            >
+              TURTLE
+            </h3>
+            <span
+              class="shrink-0 rounded-full border border-principal-300 px-2.5 py-0.5 text-xs font-mono text-principal-500"
+              data-lang-es="En progreso"
+            >
+              In progress
+            </span>
+          </div>
+          <p
+            class="text-sm font-medium text-principal-600 leading-relaxed"
+            data-lang-es="Sistema de gestión operativa para restaurantes que cubre el área administrativa de las operaciones diarias"
           >
-            <img
-              src="/src/assets/svgs/github.svg"
-              alt=""
-              aria-hidden="true"
-              class="w-4"
-            />
-            <span data-lang-es="Ver repositorio">View repository</span>
-          </a>
+            Operative management system for restaurants covering the admin side
+            of daily operations
+          </p>
+          <!--Tech tags: pending (private repository, stack to be confirmed)-->
+          <div
+            class="mt-auto flex justify-end border-t border-t-principal-200 pt-3"
+          >
+            <a
+              href="https://github.com/TURTLE-URP/TURTLE-Frontend-Adm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-mono text-principal-600 transition-colors hover:bg-principal-200/60 hover:text-principal-800"
+              aria-label="View the TURTLE repository on GitHub"
+              data-lang-es-aria-label="Ver el repositorio de TURTLE en GitHub"
+            >
+              <img
+                src="/src/assets/svgs/github.svg"
+                alt=""
+                aria-hidden="true"
+                class="w-4"
+              />
+              <span data-lang-es="Ver repositorio">View repository</span>
+            </a>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   </div>
 </section>

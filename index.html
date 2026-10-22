@@ -83,8 +83,11 @@
         <!--#include partial="process.html"-->
       </section>
       <!--Projects & Experience-->
+      <!-- Fixed height on desktop so both columns end at the same bottom line:
+           each column distributes its inner space with flex, and the scrollable
+           region stretches to fill whatever is left under its heading. -->
       <section
-        class="px-[5%] py-10 bg-principal-200 flex flex-col xl:flex-row xl:gap-8"
+        class="px-[5%] py-10 bg-principal-200 flex flex-col gap-8 xl:h-[85dvh] xl:flex-row"
         aria-label="Experience and projects"
         data-lang-es-aria-label="Experiencia y proyectos"
       >
