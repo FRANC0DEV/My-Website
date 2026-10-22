@@ -1,0 +1,75 @@
+      <section
+        class="h-[calc(100dvh-51.34px)] relative flex flex-col"
+        aria-labelledby="hero-title"
+      >
+        <div
+          class="flex-1 relative z-10 flex flex-col items-center justify-between"
+        >
+          <!--Text-->
+          <div
+            class="flex flex-1 flex-col justify-center lg:justify-center gap-y-10 landscape:gap-y-0 lg:landscape:gap-y-10"
+          >
+            <h1
+              class="flex flex-col leading-none text-center text-principal-800"
+              id="hero-title"
+            >
+              <span
+                class="font-quicksand font-light not-landscape:text-[7dvh] landscape:text-[7dvw] lg:landscape:text-[3dvw] opacity-0 animate-[fadeIn_0.5s_linear_forwards]"
+                data-lang-es="Soy"
+                >I'm</span
+              >
+              <span
+                class="font-norse not-landscape:text-[14dvh] landscape:text-[20dvw] lg:landscape:text-[16dvw]"
+              >
+                <div
+                  class="inline-flex flex-wrap gap-x-[0.5ch] wrap-anywhere justify-center leading-none"
+                  id="my-name"
+                >
+                  <div class="inline-flex flex-nowrap gap-0">
+                    <span class="opacity-0">E</span>
+                    <span class="opacity-0">D</span>
+                    <span class="opacity-0">G</span>
+                    <span class="opacity-0">A</span>
+                    <span class="opacity-0">R</span>
+                  </div>
+                  <!-- &nbsp; -->
+                  <div class="flex flex-nowrap gap-0">
+                    <span class="opacity-0">F</span>
+                    <span class="opacity-0">R</span>
+                    <span class="opacity-0">A</span>
+                    <span class="opacity-0">N</span>
+                    <span class="opacity-0">C</span>
+                    <span class="opacity-0">O</span>
+                  </div>
+                </div>
+              </span>
+            </h1>
+            <h2
+              class="font-quicksand text-principal-800 font-light text-center not-landscape:text-[4dvh] landscape:text-[5dvw] lg:landscape:text-[3dvw] opacity-0 animate-[fadeIn_0.3s_2s_linear_forwards]"
+              data-lang-es="&lt;Desarrollador Full Stack/&gt;"
+            >
+              &lt;Full Stack Developer/&gt;
+            </h2>
+          </div>
+          <!-- </div> -->
+          <!--Grass container-->
+          <div
+            class="w-full h-12 animate-grass-appear"
+            style="
+              background-image: url(&quot;/src/assets/svgs/grass-light.svg&quot;);
+              background-repeat: repeat-x;
+            "
+            aria-hidden="true"
+          ></div>
+        </div>
+
+        <!--Wind Canvas-->
+        <canvas
+          id="wind-canvas"
+          width="900"
+          height="600"
+          class="hidden lg:block absolute w-full h-full top-0 left-0 pointer-events-none"
+          aria-hidden="true"
+        >
+        </canvas>
+      </section>

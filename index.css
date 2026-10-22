@@ -11,10 +11,16 @@
   -moz-user-select: none;
   -ms-user-select: none;
   touch-action: pan-y pinch-zoom;
+  /* Never show a scrollbar (cross-browser), even on hover */
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Legacy Edge/IE */
 }
 
 .techcarousel::-webkit-scrollbar {
   display: none;
+  width: 0;
+  height: 0;
 }
 
 .techcarousel .carouselgroup .card {
@@ -47,25 +53,19 @@
 @media (width >= 46rem) {
   @media (orientation: landscape) {
     .techcarousel .carouselgroup .card {
-      width: 7dvw;
+      width: 5rem;
     }
   }
   @media not (orientation: landscape) {
     .techcarousel .carouselgroup .card {
-      width: 12dvw;
+      width: 6rem;
     }
   }
 }
 
 @media (width >= 64rem) {
   .techcarousel .carouselgroup .card {
-    width: 5dvw;
-  }
-
-  @media not (orientation: landscape) {
-    .techcarousel .carouselgroup .card {
-      width: 6dvh;
-    }
+    width: 5.5rem;
   }
 }
 
@@ -75,11 +75,23 @@
 
 .carouselgroup {
   display: flex;
+  flex: 0 0 auto; /* groups keep their intrinsic width, they don't shrink */
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* left-align so overflow never centers/pulls content */
   gap: 1rem;
   padding-right: 1rem;
+}
+
+/* The moving track holds the two identical groups and slides as a whole.
+   Animating the wrapper (not each group) keeps both copies perfectly in
+   phase, removing the jitter/reset clash on infinite loop. */
+.carouseltrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
   animation: carousel-spin 40s linear infinite;
+  will-change: transform; /* GPU-composited, smooth movement */
+  backface-visibility: hidden;
 }
 
 .slider::-webkit-scrollbar {
@@ -153,10 +165,10 @@
 
 @keyframes carousel-spin {
   from {
-    translate: 0;
+    transform: translate3d(0, 0, 0);
   }
   to {
-    translate: -100%;
+    transform: translate3d(-50%, 0, 0); /* slide exactly one group width */
   }
 }
 

@@ -10,18 +10,19 @@ export function initTechCarousel(): void {
     const isVisible = window.getComputedStyle(carousel).display !== 'none';
 
     if (isVisible && !isCloned) {
-      // Clone the group
+      // Clone the group and append it to the track (not the viewport container)
+      const track = carousel.querySelector('.carouseltrack');
       const originalGroup = carousel.querySelector('.carouselgroup');
-      if (originalGroup) {
+      if (track && originalGroup) {
         const clone = originalGroup.cloneNode(true) as HTMLElement;
         clone.setAttribute('aria-hidden', 'true');
-        
+
         // Make links non-focusable
         clone.querySelectorAll('a').forEach(link => {
           link.setAttribute('tabindex', '-1');
         });
-        
-        carousel.appendChild(clone);
+
+        track.appendChild(clone);
         isCloned = true;
       }
     }

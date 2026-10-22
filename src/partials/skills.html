@@ -1,0 +1,669 @@
+        <div
+          class="bg-principal-800 px-[5%] py-4 flex flex-col lg:landscape:flex-row landscape:py-16 sm:py-16 gap-3 lg:landscape:justify-between box-border"
+        >
+          <div class="flex-2 flex flex-col justify-center">
+            <h2
+              id="skills-heading"
+              class="font-juliusSansOne text-[#f2f2f2] text-center text-[2.5dvh] sm:landscape:text-[24px] landscape:text-[16px] lg:landscape:text-[1.5dvw] lg:landscape:text-left"
+              data-lang-es="Construye con calibre moderno"
+            >
+              Build with modern firepower
+            </h2>
+            <p
+              class="font-quicksand text-[#f2f2f2] font-light italic text-[1.9dvh] text-center sm:landscape:text-[20px] landscape:text-center landscape:text-[14px] lg:landscape:text-left lg:landscape:text-[2dvh]"
+              data-lang-es="Stack serio, toque humano"
+            >
+              Serious tech, human touch
+            </p>
+          </div>
+
+          <!--Static cards (mobile only)-->
+          <div
+            id="static-tech-cards-container"
+            class="w-full flex flex-wrap justify-center landscape:hidden sm:hidden opacity-0"
+            role="region"
+            aria-label="Technology stack"
+          >
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/react.svg"
+              alt="React JS logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/tailwind.svg"
+              alt="Tailwind CSS logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/postman.svg"
+              alt="Postman API testing tool logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/nextJS.svg"
+              alt="Next JS logo"
+            />
+
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/sqlServer.svg"
+              alt="Microsoft SQL Server logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/mysql.svg"
+              alt="MySQL database logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/prisma.svg"
+              alt="Prisma ORM logo"
+            />
+
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/dynamoDB.svg"
+              alt="AWS DynamoDB logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/awsLambda.svg"
+              alt="AWS Lambda logo"
+            />
+            <img
+              class="w-16 p-2 aspect-square filter-[contrast(0%)_brightness(180%)]"
+              src="/src/assets/svgs/shadcnUI.svg"
+              alt="Shadcn UI component library logo"
+            />
+
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/vitejs.svg"
+              alt="Vite JS build tool logo"
+            />
+
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/html.svg"
+              alt="HTML5 logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/css.svg"
+              alt="CSS3 logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/javascript.svg"
+              alt="JavaScript programming language logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/typescript.svg"
+              alt="TypeScript programming language logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/git.svg"
+              alt="Git version control logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square filter-[contrast(0%)_brightness(180%)]"
+              src="/src/assets/svgs/github.svg"
+              alt="GitHub platform logo"
+            />
+
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/nodeJS.svg"
+              alt="Node JS logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/docker.svg"
+              alt="Docker platform logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/podman.svg"
+              alt="Podman container engine logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/postgresql.svg"
+              alt="PostgreSQL database logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/nestjs.svg"
+              alt="NestJS framework logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/python.svg"
+              alt="Python programming language logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/fastapi.svg"
+              alt="FastAPI framework logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/linux.svg"
+              alt="Linux operating system logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/figma.svg"
+              alt="Figma design tool logo"
+            />
+            <img
+              class="grayscale w-16 p-2 aspect-square"
+              src="/src/assets/svgs/opencode.svg"
+              alt="OpenCode coding agent logo"
+            />
+          </div>
+
+          <!--Carousel (only on landscape or larger devices) -->
+          <div
+            class="techcarousel relative hidden w-full flex-4 overflow-hidden before:absolute before:left-0 before:z-10 before:h-full before:w-[10%] before:bg-linear-90 before:from-principal-800 before:from-5% before:to-transparent before:to-80% after:absolute after:right-0 after:z-10 after:h-full after:w-[10%] after:bg-linear-90 after:from-transparent after:from-5% after:to-principal-800 after:to-80% landscape:flex sm:flex"
+            role="region"
+            aria-label="Scrollable technology stack carousel"
+            id="techcarousel"
+          >
+            <!--track: holds the two identical groups and animates as a whole-->
+            <div class="carouseltrack">
+            <!--group-->
+            <div class="carouselgroup">
+              <!--cards-->
+              <!--react-->
+              <div
+                class="card transition-colors group hover:bg-[#58c3dbff]/10 active:bg-[#58c3dbff]/10"
+              >
+                <a
+                  href="https://react.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit React official website"
+                >
+                  <img
+                    src="/src/assets/svgs/react.svg"
+                    alt="React JS - JavaScript library for building user interfaces"
+                    class="filter-[invert(50%)_brightness(150%)] group-hover:filter-[drop-shadow(0px_0px_50px_#58c3dbff)_brightness(1)_saturate(5)] group-active:filter-[drop-shadow(0px_0px_50px_#58c3dbff)_brightness(1)_saturate(5)]"
+                  />
+                </a>
+              </div>
+              <!--tailwind-->
+              <div
+                class="card transition-colors group hover:bg-[#00bcffff]/10 active:bg-[#00bcffff]/10"
+              >
+                <a
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Tailwind CSS documentation"
+                >
+                  <img
+                    src="/src/assets/svgs/tailwind.svg"
+                    alt="Tailwind CSS - Utility-first CSS framework"
+                    class="filter-[invert(50%)_brightness(150%)] group-hover:filter-[drop-shadow(0px_0px_50px_#00bcffff)_brightness(1)_saturate(1.5)] group-active:filter-[drop-shadow(0px_0px_50px_#00bcffff)_brightness(1)_saturate(1.5)]"
+                  />
+                </a>
+              </div>
+              <!--Postman-->
+              <div
+                class="card transition-colors group hover:bg-[#FF6C37]/10 active:bg-[#FF6C37]/10"
+              >
+                <a
+                  href="https://www.postman.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Postman API testing platform"
+                >
+                  <img
+                    src="/src/assets/svgs/postman.svg"
+                    alt="Postman - API testing and documentation tool"
+                    class="w-full grayscale group-active:filter-[drop-shadow(0px_0px_50px_#FF6C37)_brightness(1)_saturate(1)] group-hover:filter-[drop-shadow(0px_0px_50px_#FF6C37)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--Node JS-->
+              <div
+                class="card transition-colors group hover:bg-[#4F9C43]/10 active:bg-[#4F9C43]/10"
+              >
+                <a
+                  href="https://nodejs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Node.js official website"
+                >
+                  <img
+                    src="/src/assets/svgs/nodeJS.svg"
+                    alt="React JS - JavaScript library for building user interfaces"
+                    class="filter-[invert(50%)_brightness(150%)] group-hover:filter-[drop-shadow(0px_0px_50px_#4F9C43)_brightness(1)_saturate(2)] group-active:filter-[drop-shadow(0px_0px_50px_#4F9C43)_brightness(1)_saturate(5)]"
+                  />
+                </a>
+              </div>
+              <!--Next JS-->
+              <div
+                class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
+              >
+                <a
+                  href="https://nextjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Next.js documentation"
+                >
+                  <img
+                    src="/src/assets/svgs/nextJS.svg"
+                    alt="Next JS - React framework for production"
+                    class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#FFFFFF)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#FFFFFF)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--Microsoft SQL Server-->
+              <div
+                class="card transition-colors group hover:bg-[#BD2425]/10 active:bg-[#BD2425]/10"
+              >
+                <a
+                  href="https://www.microsoft.com/en-us/sql-server"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Microsoft SQL Server"
+                >
+                  <img
+                    src="/src/assets/svgs/sqlServer.svg"
+                    alt="Microsoft SQL Server - Relational database"
+                    class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#BD2425)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#BD2425)_brightness(1)_saturate(3)]"
+                  />
+                </a>
+              </div>
+              <!--MySQL-->
+              <div
+                class="card transition-colors group p-0! hover:bg-[#F29111]/10 active:bg-[#F29111]/10"
+              >
+                <a
+                  href="https://www.mysql.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MySQL official website"
+                >
+                  <img
+                    src="/src/assets/svgs/mysql.svg"
+                    alt="MySQL - Open source relational database"
+                    class="w-[80%] grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F29111)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F29111)_brightness(1)_saturate(1)] mx-auto"
+                  />
+                </a>
+              </div>
+              <!--Prisma-->
+              <div
+                class="card transition-colors group hover:bg-[#04D5E7]/10 active:bg-[#04D5E7]/10"
+              >
+                <a
+                  href="https://www.prisma.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Prisma documentation"
+                >
+                  <img
+                    src="/src/assets/svgs/prisma.svg"
+                    alt="Prisma - Modern database ORM"
+                    class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#04D5E7)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#04D5E7)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--AWS DynamoDB-->
+              <div
+                class="card transition-colors group hover:bg-[#1A476F]/10 active:bg-[#1A476F]/10"
+              >
+                <a
+                  href="https://aws.amazon.com/dynamodb/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit AWS DynamoDB"
+                >
+                  <img
+                    src="/src/assets/svgs/dynamoDB.svg"
+                    alt="AWS DynamoDB - NoSQL database service"
+                    class="w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#1A476F)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#1A476F)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--AWS Lambda-->
+              <div
+                class="card transition-colors group hover:bg-[#F68536]/10 active:bg-[#F68536]/10"
+              >
+                <a
+                  href="https://aws.amazon.com/pm/lambda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit AWS Lambda"
+                >
+                  <img
+                    src="/src/assets/svgs/awsLambda.svg"
+                    alt="AWS Lambda - Serverless compute service"
+                    class="aspect-square w-full grayscale group-active:filter-[drop-shadow(0px_0px_50px_#F68536)_brightness(1)_saturate(1)] group-hover:filter-[drop-shadow(0px_0px_50px_#F68536)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--shadcn UI-->
+              <div
+                class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
+              >
+                <a
+                  href="https://ui.shadcn.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Shadcn UI component library"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256"
+                    class="text-[#979797] group-hover:text-white aspect-square w-full group-hover:filter-[drop-shadow(0px_0px_50px_#F2F2F2)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F2F2F2)_brightness(1)_saturate(1)]"
+                    aria-label="Shadcn UI - High-quality component library"
+                  >
+                    <rect width="256" height="256" fill="none"></rect>
+                    <line
+                      x1="208"
+                      y1="128"
+                      x2="128"
+                      y2="208"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="32"
+                    ></line>
+                    <line
+                      x1="192"
+                      y1="40"
+                      x2="40"
+                      y2="192"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="32"
+                    ></line>
+                  </svg>
+                </a>
+              </div>
+              <!--Vite-->
+              <div
+                class="card transition-colors group hover:bg-[#9043FF]/10 active:bg-[#9043FF]/10"
+              >
+                <a
+                  href="https://vite.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Vite build tool documentation"
+                >
+                  <img
+                    src="/src/assets/svgs/vitejs.svg"
+                    alt="Vite - Next generation build tool"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#9043FF)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#9043FF)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--HTML-->
+              <div
+                class="card transition-colors group hover:bg-[#F16529]/10 active:bg-[#F16529]/10"
+              >
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MDN HTML documentation"
+                >
+                  <img
+                    src="/src/assets/svgs/html.svg"
+                    alt="HTML5 - Markup language for web"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F16529)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F16529)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--CSS-->
+              <div
+                class="card transition-colors group hover:bg-[#2965F1]/10 active:bg-[#2965F1]/10"
+              >
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MDN CSS documentation"
+                >
+                  <img
+                    src="/src/assets/svgs/css.svg"
+                    alt="CSS3 - Styling language for web"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#2965F1)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#2965F1)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--JS-->
+              <div
+                class="card transition-colors group hover:bg-[#F7DF1E]/10 active:bg-[#F7DF1E]/10"
+              >
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit MDN JavaScript documentation"
+                >
+                  <img
+                    src="/src/assets/svgs/javascript.svg"
+                    alt="JavaScript - Programming language for web"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F7DF1E)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F7DF1E)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+
+              <!--TS-->
+              <div
+                class="card transition-colors group hover:bg-[#3178C6]/10 active:bg-[#3178C6]/10"
+              >
+                <a
+                  href="https://www.typescriptlang.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit TypeScript official website"
+                >
+                  <img
+                    src="/src/assets/svgs/typescript.svg"
+                    alt="TypeScript - Typed superset of JavaScript"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#3178C6)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#3178C6)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--Git-->
+              <div
+                class="card transition-colors group hover:bg-[#F54D27]/10 active:bg-[#F54D27]/10"
+              >
+                <a
+                  href="https://git-scm.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Git version control documentation"
+                >
+                  <img
+                    src="/src/assets/svgs/git.svg"
+                    alt="Git - Distributed version control system"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F54D27)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F54D27)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+              <!--Github-->
+              <div
+                class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
+              >
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit GitHub platform"
+                >
+                  <img
+                    src="/src/assets/svgs/github.svg"
+                    alt="GitHub - Version control and collaboration platform"
+                    class="aspect-square w-full filter-[invert(50%)_brightness(150%)] group-hover:filter-[invert(50%)_brightness(200%)] group-active:filter-[invert(50%)_brightness(200%)]"
+                  />
+                </a>
+              </div>
+              <!--Docker-->
+              <div
+                class="card transition-colors group hover:bg-[#2496ED]/10 active:bg-[#2496ED]/10"
+              >
+                <a
+                  href="https://www.docker.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Docker official website"
+                >
+                  <img
+                    src="/src/assets/svgs/docker.svg"
+                    alt="Docker - Container platform for building and deploying applications"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#2496ED)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#2496ED)_brightness(1)_saturate(3)]"
+                  />
+                </a>
+              </div>
+              <!--Podman-->
+              <div
+                class="card transition-colors group hover:bg-[#3C6EB4]/10 active:bg-[#3C6EB4]/10"
+              >
+                <a
+                  href="https://podman.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Podman official website"
+                >
+                  <img
+                    src="/src/assets/svgs/podman.svg"
+                    alt="Podman - Daemonless container engine for OCI containers"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#3C6EB4)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#3C6EB4)_brightness(1)_saturate(3)]"
+                  />
+                </a>
+              </div>
+              <!--PostgreSQL-->
+              <div
+                class="card transition-colors group hover:bg-[#4169E1]/10 active:bg-[#4169E1]/10"
+              >
+                <a
+                  href="https://www.postgresql.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit PostgreSQL official website"
+                >
+                  <img
+                    src="/src/assets/svgs/postgresql.svg"
+                    alt="PostgreSQL - Advanced open source relational database"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#4169E1)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#4169E1)_brightness(1)_saturate(3)]"
+                  />
+                </a>
+              </div>
+              <!--NestJS-->
+              <div
+                class="card transition-colors group hover:bg-[#E0234E]/10 active:bg-[#E0234E]/10"
+              >
+                <a
+                  href="https://nestjs.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit NestJS official website"
+                >
+                  <img
+                    src="/src/assets/svgs/nestjs.svg"
+                    alt="NestJS - Progressive Node.js framework for backend applications"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#E0234E)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#E0234E)_brightness(1)_saturate(3)]"
+                  />
+                </a>
+              </div>
+              <!--Python-->
+              <div
+                class="card transition-colors group hover:bg-[#3776AB]/10 active:bg-[#3776AB]/10"
+              >
+                <a
+                  href="https://www.python.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Python official website"
+                >
+                  <img
+                    src="/src/assets/svgs/python.svg"
+                    alt="Python - Programming language for general purpose development"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#3776AB)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#3776AB)_brightness(1)_saturate(3)]"
+                  />
+                </a>
+              </div>
+              <!--FastAPI-->
+              <div
+                class="card transition-colors group hover:bg-[#009688]/10 active:bg-[#009688]/10"
+              >
+                <a
+                  href="https://fastapi.tiangolo.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit FastAPI documentation"
+                >
+                  <img
+                    src="/src/assets/svgs/fastapi.svg"
+                    alt="FastAPI - High performance Python web framework"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#009688)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#009688)_brightness(1)_saturate(3)]"
+                  />
+                </a>
+              </div>
+              <!--Linux-->
+              <div
+                class="card transition-colors group hover:bg-[#F5BD0C]/10 active:bg-[#F5BD0C]/10"
+              >
+                <a
+                  href="https://www.kernel.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit the Linux kernel website"
+                >
+                  <img
+                    src="/src/assets/svgs/linux.svg"
+                    alt="Linux - Open source operating system kernel"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F5BD0C)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#F5BD0C)_brightness(1)_saturate(3)]"
+                  />
+                </a>
+              </div>
+              <!--Figma-->
+              <div
+                class="card transition-colors group hover:bg-[#F24E1E]/10 active:bg-[#F24E1E]/10"
+              >
+                <a
+                  href="https://www.figma.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit Figma official website"
+                >
+                  <img
+                    src="/src/assets/svgs/figma.svg"
+                    alt="Figma - Collaborative interface design tool"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F24E1E)_brightness(1)_saturate(3)] group-active:filter-[drop-shadow(0px_0px_50px_#F24E1E)_brightness(1)_saturate(3)]"
+                  />
+                </a>
+              </div>
+              <!--OpenCode-->
+              <div
+                class="card transition-colors group hover:bg-[#F2F2F2]/10 active:bg-[#F2F2F2]/10"
+              >
+                <a
+                  href="https://opencode.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visit OpenCode official website"
+                >
+                  <img
+                    src="/src/assets/svgs/opencode.svg"
+                    alt="OpenCode - Open source AI coding agent"
+                    class="aspect-square w-full grayscale group-hover:filter-[drop-shadow(0px_0px_50px_#F2F2F2)_brightness(1)_saturate(1)] group-active:filter-[drop-shadow(0px_0px_50px_#F2F2F2)_brightness(1)_saturate(1)]"
+                  />
+                </a>
+              </div>
+            </div>
+            </div><!-- /.carouseltrack -->
+          </div>
+        </div>

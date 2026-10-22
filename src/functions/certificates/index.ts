@@ -1,0 +1,1 @@
+export { setupCertificatesSection } from "./certificates";
