@@ -6,6 +6,7 @@ import { setupHeroSection } from "./hero";
 import { setupSkillsAndTechSection } from "./skills-and-technologies";
 import { setupContactMeSection } from './contact-me';
 import { setupCertificatesSection } from "./certificates";
+import { setupProjectsSection } from "./projects";
 import { initI18n } from "./i18n/i18n";
 // i18n must run first so every section (and its DOM clones) starts translated
 initI18n();
@@ -15,6 +16,7 @@ setupHeroSection();
 setupSkillsAndTechSection();
 setupContactMeSection();
 setupCertificatesSection();
+setupProjectsSection();
 // Lazy load wind animation after page is interactive
 // This reduces initial JavaScript execution by ~53%
 let windAnimationLoaded = false;

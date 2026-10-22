@@ -1,0 +1,1 @@
+export { setupProjectsSection } from "./projects";

@@ -1,7 +1,12 @@
 <!--Experience-->
-<div class="container w-full xl:flex-[4_0_none] space-y-4 self-center">
+<section
+  id="experience"
+  aria-labelledby="experience-heading"
+  class="w-full space-y-4 xl:flex-[4_0_none]"
+>
   <div class="space-y-1">
     <h2
+      id="experience-heading"
       class="font-juliusSansOne text-4xl text-center lg:text-left lg:text-5xl text-principal-500"
       data-lang-es="Experiencia"
     >
@@ -61,111 +66,16 @@
       </span>
     </span>
   </button>
-  <!--Timelines container-->
-  <div class="overflow-auto flex flex-col">
-    <!--Timeline #5-->
-    <div class="relative pl-10">
-      <!--bar-->
-      <div
-        class="absolute top-0 bottom-0 left-[0.45rem] border border-principal-500"
-      ></div>
-      <!--point-->
-      <div
-        class="absolute left-0 aspect-square w-4 rounded-full border-2 border-principal-500 bg-principal-500 timeline-dot"
-      ></div>
-      <!--card-->
-      <div
-        class="bg-principal-50/90 rounded-xl p-6 transition-all duration-300 mb-3"
-      >
-        <div
-          class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
-        >
-          <h3
-            class="text-lg font-semibold text-principal-500"
-            data-lang-es="Desarrollador Frontend"
-          >
-            Frontend Developer
-          </h3>
-          <span
-            class="text-sm text-principal-500/60 font-mono"
-            data-lang-es="Mar 2024 - Presente"
-          >
-            Mar 2024 - Present
-          </span>
-        </div>
-        <div class="flex items-center gap-2 mt-1">
-          <span class="text-sm font-medium text-principal-600"
-            >Freelance</span
-          ><span class="text-principal-400">•</span
-          ><span class="text-sm text-principal-400" data-lang-es="Perú"
-            >Peru</span
-          >
-        </div>
-        <ul class="mt-4 space-y-2">
-          <li
-            class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
-          >
-            <span class="text-principal-600 shrink-0 text-[16px]">•</span>
-            <p
-              data-lang-es="Desarrollo SPAs (Single Page Applications) para empresas, enfocadas en optimizar procesos operativos y mejorar la experiencia digital de los usuarios"
-            >
-              Developed SPAs (Single Page Applications) for companies, focused
-              on optimizing operational processes and improving users' digital
-              experience
-            </p>
-          </li>
-          <li
-            class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
-          >
-            <span class="text-principal-600 shrink-0 text-[16px]">•</span>
-            <p
-              data-lang-es="Participo en el desarrollo de soluciones tecnológicas para distintos sectores, aportando interfaces modernas, escalables y orientadas a resultados"
-            >
-              Participated in the development of technology solutions for
-              different sectors, delivering modern, scalable and
-              results-driven interfaces
-            </p>
-          </li>
-          <li
-            class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
-          >
-            <span class="text-principal-600 shrink-0 text-[16px]">•</span>
-            <p
-              data-lang-es="Proyectos destacados: e-commerce para tienda de tejidos a crochet (Elsa Val), plataforma de e-commerce y gestión de almacén para tienda de motos (Motoware), sistema de acreditación universitaria, sistema de gestión de procesos operativos para empresa consultora de obras civiles (TCINGE) y sistema para empresa especializada en sistemas contra incendios y seguridad integral (Engineer Fire)"
-            >
-              Highlighted projects: e-commerce for a crochet store (Elsa Val),
-              e-commerce and warehouse management platform for a motorcycle
-              shop (Motoware), university accreditation system, operational
-              process management system for a civil works consulting firm
-              (TCINGE) and a system for a fire protection and security company
-              (Engineer Fire)
-            </p>
-          </li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >React</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >TypeScript</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Next.js</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Tailwind CSS</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Figma</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Node.js</span
-          >
-        </div>
-      </div>
-    </div>
-    <!--Timeline #4-->
+  <!--Timelines container (scrollable region, keyboard accessible)-->
+  <div
+    id="experience-timeline"
+    role="region"
+    aria-label="Professional experience timeline"
+    data-lang-es-aria-label="Línea de tiempo de experiencia profesional"
+    tabindex="0"
+    class="scroll-region flex max-h-[65dvh] flex-col overflow-y-auto overflow-x-hidden overscroll-y-contain"
+  >
+    <!--Timeline #3-->
     <div class="relative pl-10">
       <!--bar-->
       <div
@@ -196,12 +106,9 @@
           </span>
         </div>
         <div class="flex items-center gap-2 mt-1">
-          <span class="text-sm font-medium text-principal-600"
-            >Greta Labs</span
+          <span class="text-sm font-medium text-principal-600">Greta Labs</span
           ><span class="text-principal-400">•</span
-          ><span
-            class="text-sm text-principal-400"
-            data-lang-es="Lima, Perú"
+          ><span class="text-sm text-principal-400" data-lang-es="Lima, Perú"
             >Lima, Peru</span
           >
         </div>
@@ -224,8 +131,8 @@
             <p
               data-lang-es="Optimicé componentes frontend logrando una reducción significativa en los tiempos de carga"
             >
-              Optimized frontend components achieving a significant reduction
-              in load times
+              Optimized frontend components achieving a significant reduction in
+              load times
             </p>
           </li>
           <li
@@ -277,7 +184,7 @@
         </div>
       </div>
     </div>
-    <!--Timeline #3-->
+    <!--Timeline #2-->
     <div class="relative pl-10">
       <!--bar-->
       <div
@@ -347,8 +254,8 @@
             <p
               data-lang-es="Mantuve y optimicé el código frontend de aplicaciones desarrolladas con Next.js"
             >
-              Maintained and optimized frontend code in applications built
-              with Next.js
+              Maintained and optimized frontend code in applications built with
+              Next.js
             </p>
           </li>
           <li
@@ -434,7 +341,7 @@
         </div>
       </div>
     </div>
-    <!--Timeline #2-->
+    <!--Timeline #1-->
     <div class="relative pl-10">
       <!--bar-->
       <div
@@ -446,7 +353,7 @@
       ></div>
       <!--card-->
       <div
-        class="bg-principal-50/90 rounded-xl p-6 transition-all duration-300 mb-3"
+        class="bg-principal-50/90 rounded-xl p-6 transition-all duration-300"
       >
         <div
           class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
@@ -504,8 +411,8 @@
             <p
               data-lang-es="Construí componentes UI responsive a partir de diseños en Figma utilizando React y Tailwind CSS"
             >
-              Built responsive UI components from Figma designs using React
-              and Tailwind CSS
+              Built responsive UI components from Figma designs using React and
+              Tailwind CSS
             </p>
           </li>
           <li
@@ -515,8 +422,8 @@
             <p
               data-lang-es="Integré y me comuniqué con aplicaciones backend mediante servicios REST"
             >
-              Integrated and communicated with backend applications through
-              REST services
+              Integrated and communicated with backend applications through REST
+              services
             </p>
           </li>
           <li
@@ -590,126 +497,5 @@
         </div>
       </div>
     </div>
-    <!--Timeline #1-->
-    <div class="relative pl-10">
-      <!--bar-->
-      <div
-        class="absolute top-0 bottom-0 left-[0.45rem] border border-principal-500"
-      ></div>
-      <!--point-->
-      <div
-        class="absolute left-0 aspect-square w-4 rounded-full border-2 border-principal-500 bg-principal-500 timeline-dot"
-      ></div>
-      <!--card-->
-      <div class="bg-principal-50/90 rounded-xl p-6 transition-all duration-300">
-        <div
-          class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"
-        >
-          <h3
-            class="text-lg font-semibold text-principal-500"
-            data-lang-es="Desarrollador Backend"
-          >
-            Backend Developer
-          </h3>
-          <span
-            class="text-sm text-principal-500/60 font-mono"
-            data-lang-es="Ago 2024 - Dic 2024"
-          >
-            Aug 2024 - Dec 2024
-          </span>
-        </div>
-        <div class="flex items-center gap-2 mt-1">
-          <a
-            href="https://www.urp.edu.pe/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-sm font-medium text-principal-600 hover:text-principal-700 transition-colors inline-flex items-center gap-1"
-            >Universidad Ricardo Palma
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-external-link h-3 w-3"
-              aria-hidden="true"
-            >
-              <path d="M15 3h6v6"></path>
-              <path d="M10 14 21 3"></path>
-              <path
-                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-              ></path></svg></a
-          ><span class="text-principal-400">•</span
-          ><span
-            class="text-sm text-principal-400"
-            data-lang-es="Proyecto académico"
-            >Academic project</span
-          >
-        </div>
-        <ul class="mt-4 space-y-2">
-          <li
-            class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
-          >
-            <span class="text-principal-600 shrink-0 text-[16px]">•</span>
-            <p
-              data-lang-es="Diseñé e implementé la base de datos de un servidor API REST para una aplicación de música"
-            >
-              Designed and implemented the database for a REST API server for
-              a music application
-            </p>
-          </li>
-          <li
-            class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
-          >
-            <span class="text-principal-600 shrink-0 text-[16px]">•</span>
-            <p
-              data-lang-es="Creé endpoints para brindar información a la aplicación cliente y establecí conexiones a la base de datos"
-            >
-              Created endpoints to serve the client application and established
-              database connections
-            </p>
-          </li>
-          <li
-            class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
-          >
-            <span class="text-principal-600 shrink-0 text-[16px]">•</span>
-            <p
-              data-lang-es="Integré servicios en la nube para el almacenamiento de medios digitales"
-            >
-              Integrated cloud services for digital media storage
-            </p>
-          </li>
-          <li
-            class="text-sm text-principal-600/80 font-medium leading-relaxed flex gap-2"
-          >
-            <span class="text-principal-600 shrink-0 text-[16px]">•</span>
-            <p
-              data-lang-es="Desplegué el servidor y documenté la API REST"
-            >
-              Deployed the server and documented the REST API
-            </p>
-          </li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >REST APIs</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Database Design</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >Cloud Storage</span
-          ><span
-            class="rounded-full bg-principal-200/50 px-2.5 py-0.5 text-xs text-principal-400 font-mono"
-            >API Documentation</span
-          >
-        </div>
-      </div>
-    </div>
   </div>
-</div>
+</section>

@@ -118,6 +118,34 @@
   display: none;
 }
 
+/* Scrollable regions (Experience timeline, Projects grid).
+   Both are keyboard focusable (tabindex="0"), so they need a clear focus
+   ring, and a subtle but visible scrollbar so the overflow is discoverable
+   instead of hidden (the site hides scrollbars elsewhere on purpose). */
+.scroll-region {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-principal-400) transparent;
+}
+
+.scroll-region::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scroll-region::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-region::-webkit-scrollbar-thumb {
+  background-color: var(--color-principal-400);
+  border-radius: 9999px;
+}
+
+.scroll-region:focus-visible {
+  outline: 2px solid var(--color-principal-500);
+  outline-offset: 4px;
+}
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @font-face {
