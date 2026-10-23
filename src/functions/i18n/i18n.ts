@@ -24,8 +24,12 @@ export type Language = "en" | "es";
 export const DEFAULT_LANGUAGE: Language = "en";
 export const SUPPORTED_LANGUAGES: readonly Language[] = ["en", "es"];
 
-/** Element attributes that also carry a Spanish variant in the markup. */
-const TRANSLATED_ATTRIBUTES = ["aria-label", "placeholder"] as const;
+/**
+ * Element attributes that also carry a Spanish variant in the markup, e.g.
+ * `data-lang-es-aria-label`, `data-lang-es-placeholder`, or `data-lang-es-href`
+ * (the Download CV button points at a different PDF per language).
+ */
+const TRANSLATED_ATTRIBUTES = ["aria-label", "placeholder", "href"] as const;
 
 const STORAGE_KEY = "portfolio:lang";
 
